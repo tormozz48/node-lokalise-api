@@ -1,15 +1,17 @@
 {
-  "name": "typescript-starter-node",
-  "version": "1.0.4",
-  "description": "A starter package for typescript projects",
+  "name": "node-localise-api",
+  "version": "1.0.0",
+  "description": "Localise API",
   "keywords": [
-    "TypeScript",
-    "starter",
+    "Localise",
+    "API",
     "node",
-    "boilerplate"
+    "library",
+    "TypeScript",
+    "Client"
   ],
-  "author": "Shishir Ramam",
-  "repository": "sramam/typescript-starter-node",
+  "author": "Andrey Kuznetsov",
+  "repository": "tormozz48/node-localise-api",
   "license": "Apache-2.0",
   "private": false,
   "engines": {
@@ -46,15 +48,14 @@
     "check-coverage": "istanbul check-coverage --include coverage/typescript/coverage.json",
     "test-with-cover": "istanbul cover ./node_modules/mocha/bin/_mocha -- --opts mocha.opts",
     "test-without-cover": "mocha --opts mocha.opts",
-    "build": "npm-run-batch",
+    "build": "run-batch",
     "build:dist": "run-batch",
     "build:watch": "cross-env NODE_ENV=production run-batch",
     "test": "run-batch",
     "test:dist": "run-batch",
     "pkg-ok": "pkg-ok",
     "precommit": "run-batch",
-    "prepush": "run-batch",
-    "postinstall": "node ./scripts/postinstall.js"
+    "prepush": "run-batch"
   },
   "run-batch": {
     "build": [
@@ -99,7 +100,6 @@
       "check-coverage"
     ],
     "precommit": [
-      "postinstall",
       "build:dist",
       "staged-mods-ok"
     ],
