@@ -37,7 +37,6 @@
     "compile:dist": "tsc -p tsconfig.dist.json",
     "compile:watch": "tsc -w",
     "sh": "npm-sh",
-    "secure": "nsp check",
     "check": "npm outdated",
     "coverage": "run-batch",
     "coverage:dist": "run-batch",
@@ -105,7 +104,6 @@
     ],
     "prepush": [
       "build:dist",
-      "secure",
       "no-mods"
     ]
   },
