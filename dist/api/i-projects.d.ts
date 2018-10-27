@@ -1,9 +1,18 @@
 import { IPage } from '../params/i-page';
+import { IProject } from '../model/i-project';
 export interface IProjects {
-    list(query?: IPage): Promise<any>;
-    get(projectId: string): Promise<any>;
-    create(body: object): Promise<any>;
-    update(projectId: string, body: object): Promise<any>;
-    empty(projectId: string): Promise<any>;
-    delete(projectId: string): Promise<any>;
+    list(query?: IPage): Promise<{
+        projects: IProject[];
+    }>;
+    get(projectId: string): Promise<IProject>;
+    create(body: object): Promise<IProject>;
+    update(projectId: string, body: object): Promise<IProject>;
+    empty(projectId: string): Promise<{
+        project_id: string;
+        keys_deleted: boolean;
+    }>;
+    delete(projectId: string): Promise<{
+        project_id: string;
+        keys_deleted: boolean;
+    }>;
 }
