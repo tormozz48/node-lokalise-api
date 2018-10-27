@@ -47,11 +47,12 @@ export interface IScreenshots {
      * @description Updates the properties of a screenshot.
      * Requires Manage screenshots admin right.
      * @param {string} projectId
+     * @param {number} screenshotId
      * @param {object} body
      * @returns {Promise<{project_id: string, screenshot: IScreenshot}>}
      * @memberof IScreenshots
      */
-    update(projectId: string, body: object): Promise<{
+    update(projectId: string, screenshotId: string, body: object): Promise<{
         project_id: string;
         screenshot: IScreenshot;
     }>;

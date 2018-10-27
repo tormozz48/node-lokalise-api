@@ -27,8 +27,7 @@ export interface IProjects {
      * @returns {Promise<IProject>}
      * @memberof IProjects
      */
-    get(projectId: string):
-        Promise<IProject>;
+    get(projectId: string): Promise<IProject>;
 
     /**
      * @public
@@ -38,8 +37,7 @@ export interface IProjects {
      * @returns {Promise<IProject>}
      * @memberof IProjects
      */
-    create(body: object):
-        Promise<IProject>;
+    create(body: object): Promise<IProject>;
 
     /**
      * @public
@@ -50,8 +48,7 @@ export interface IProjects {
      * @returns {Promise<IProject>}
      * @memberof IProjects
      */
-    update(projectId: string, body: object):
-        Promise<IProject>;
+    update(projectId: string, body: object): Promise<IProject>;
 
     /**
      * @public

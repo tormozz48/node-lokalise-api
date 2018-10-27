@@ -18,6 +18,15 @@ import {Comments} from './implementation/comments';
 import {Contributors} from './implementation/contributors';
 import {Files} from './implementation/files';
 import {Keys} from './implementation/keys';
+import {Languages} from './implementation/languages';
+import {Projects} from './implementation/projects';
+import {Screenshots} from './implementation/screenshots';
+import {Snapshots} from './implementation/snapshots';
+import {Tasks} from './implementation/tasks';
+import {TeamUsers} from './implementation/team-users';
+import {Teams} from './implementation/teams';
+import {Translations} from './implementation/translations';
+
 import {Request} from './internal/request';
 
 export default class LocaliseAPI {
@@ -47,6 +56,14 @@ export default class LocaliseAPI {
         this.contributors = new Contributors(this.request);
         this.files = new Files(this.request);
         this.keys = new Keys(this.request);
+        this.languages = new Languages(this.request);
+        this.projects = new Projects(this.request);
+        this.screenshots = new Screenshots(this.request);
+        this.snapshots = new Snapshots(this.request);
+        this.tasks = new Tasks(this.request);
+        this.teamUsers = new TeamUsers(this.request);
+        this.teams = new Teams(this.request);
+        this.translations = new Translations(this.request);
     }
 
     private parseOptions(options: IOptions): IOptions {
