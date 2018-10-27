@@ -1,4 +1,4 @@
-import {IPage} from '../params/i-page';
+import {ITaskQuery} from '../query/i-task';
 import {ITask} from '../model/i-task';
 
 /**
@@ -10,11 +10,11 @@ export interface ITasks {
      * @public
      * @description Lists all tasks in the project.
      * @param {string} projectId
-     * @param {IPage} [query]
+     * @param {ITaskQuery} [query]
      * @returns {Promise<{project_id: string, tasks: ITask[]}>}
      * @memberof ITasks
      */
-    list(projectId: string, query?: IPage):
+    list(projectId: string, query?: ITaskQuery):
         Promise<{project_id: string, tasks: ITask[]}>;
 
     /**

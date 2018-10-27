@@ -1,4 +1,4 @@
-import {IPage} from '../params/i-page';
+import {IKeyQuery} from '../query/i-key';
 import {IKey} from '../model/i-key';
 
 /**
@@ -17,11 +17,11 @@ export interface IKeys {
      * @public
      * @description Lists all keys in the project.
      * @param {string} projectId
-     * @param {IPage} [query]
+     * @param {IKeyQuery} [query]
      * @returns {Promise<{project_id: string, keys: IKey[]}>}
      * @memberof IKeys
      */
-    list(projectId: string, query?: IPage):
+    list(projectId: string, query?: IKeyQuery):
         Promise<{project_id: string, keys: IKey[]}>;
 
     /**

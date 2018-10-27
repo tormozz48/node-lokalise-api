@@ -1,4 +1,4 @@
-import {IPage} from '../params/i-page';
+import {IProjectQuery} from '../query/i-project';
 import {IProject} from '../model/i-project';
 
 /**
@@ -14,12 +14,11 @@ export interface IProjects {
     /**
      * @public
      * @description Retrieves a list of projects available to the user, authorized with a token.
-     * @param {IPage} [query]
+     * @param {IProjectQuery} [query]
      * @returns {Promise<{projects: IProject[]}>}
      * @memberof IProjects
      */
-    list(query?: IPage):
-        Promise<{projects: IProject[]}>;
+    list(query?: IProjectQuery): Promise<{projects: IProject[]}>;
 
     /**
      * @public

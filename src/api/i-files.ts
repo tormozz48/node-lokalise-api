@@ -1,4 +1,4 @@
-import {IPage} from '../params/i-page';
+import {IFileQuery} from '../query/i-file';
 import {IFile} from '../model/i-file';
 
 /**
@@ -19,11 +19,11 @@ export interface IFiles {
      * If there are some keys in the project that do not have a file association,
      * they will be returned with filename __unassigned__.
      * @param {string} projectId
-     * @param {IPage} [query]
+     * @param {IFileQuery} [query]
      * @returns {Promise<{projectId: string, files: IFile[]}>}
      * @memberof IFiles
      */
-    list(projectId: string, query?: IPage):
+    list(projectId: string, query?: IFileQuery):
         Promise<{projectId: string, files: IFile[]}>;
 
     /**

@@ -8,7 +8,7 @@
         "typeRoots": ["node_modules/@types"],
         "sourceMap": false,
         "rootDir": "src",
-        "removeComments": true,
+        "removeComments": false,
         "outDir": "dist"
     },
     "exclude": [
