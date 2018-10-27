@@ -1,21 +1,24 @@
-import { IComments } from './api/i-comments';
-import { IContributors } from './api/i-contributors';
-import { IFiles } from './api/i-files';
-import { IKeys } from './api/i-keys';
-import { ILanguages } from './api/i-languages';
-import { IProjects } from './api/i-projects';
-import { IScreenshots } from './api/i-screenshots';
-import { ISnapshots } from './api/i-snapshots';
-import { ITasks } from './api/i-tasks';
-import { ITeamUsers } from './api/i-team-users';
-import { ITeams } from './api/i-teams';
-import { ITranslations } from './api/i-translations';
+import {IComments} from './api/i-comments';
+import {IContributors} from './api/i-contributors';
+import {IFiles} from './api/i-files';
+import {IKeys} from './api/i-keys';
+import {ILanguages} from './api/i-languages';
+import {IProjects} from './api/i-projects';
+import {IScreenshots} from './api/i-screenshots';
+import {ISnapshots} from './api/i-snapshots';
+import {ITasks} from './api/i-tasks';
+import {ITeamUsers} from './api/i-team-users';
+import {ITeams} from './api/i-teams';
+import {ITranslations} from './api/i-translations';
 
-import { IRequest } from './internal/i-request';
-import { IOptions } from './params/i-options';
+import {IRequest} from './internal/i-request';
+import {IOptions} from './params/i-options';
 
-import { Comments } from './implementation/comments';
-import { Request } from './internal/request';
+import {Comments} from './implementation/comments';
+import {Contributors} from './implementation/contributors';
+import {Files} from './implementation/files';
+import {Keys} from './implementation/keys';
+import {Request} from './internal/request';
 
 export default class LocaliseAPI {
     public readonly comments: IComments;
@@ -41,6 +44,9 @@ export default class LocaliseAPI {
         this.request = new Request(this.parseOptions(options));
 
         this.comments = new Comments(this.request);
+        this.contributors = new Contributors(this.request);
+        this.files = new Files(this.request);
+        this.keys = new Keys(this.request);
     }
 
     private parseOptions(options: IOptions): IOptions {
