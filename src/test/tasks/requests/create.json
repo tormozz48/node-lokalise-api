@@ -1,0 +1,24 @@
+{
+    "title": "Voicemail messages",
+    "description": "Need your help with some voicemail message translation. Thanks!",
+    "due_date": "2018-12-31 12:00:00 (Etc\/UTC)",
+    "keys": [
+        11212, 11241, 11245
+    ],
+    "languages": [
+        {
+            "language_iso": "fi",
+            "users": [
+                421
+            ]
+        },
+        {
+            "language_iso": "ru",
+            "users": [
+                422
+            ]
+        }
+    ],
+    "auto_close_languages": true,
+    "auto_close_task": true
+}

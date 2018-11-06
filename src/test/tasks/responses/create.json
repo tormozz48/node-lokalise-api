@@ -1,0 +1,64 @@
+{
+    "project_id": "20008339586cded200e0d8.29879849",
+    "task": {
+        "task_id": 55392,
+        "title": "Voicemail messages",
+        "description": "Need your help with some voicemail message translation. Thanks!",
+        "status": "in progress",
+        "progress": 0,
+        "due_date": "2018-12-31 12:00:00 (Etc\/UTC)",
+        "keys_count": 3,
+        "words_count": 91,
+        "created_at": "2018-12-31 12:00:00 (Etc\/UTC)",
+        "created_by": 420,
+        "created_by_email": "manager@yourcompany.com",
+        "languages": [
+            {
+                "language_iso": "fi",
+                "users": [
+                    {
+                        "user_id": 421,
+                        "email": "jdoe@mycompany.com",
+                        "fullname": "John Doe"
+                    }
+                ],
+                "keys": [
+                    11212, 11241, 11245
+                ],
+                "status": "created",
+                "progress": 0,
+                "initial_tm_leverage": [],
+                "keys_count": 3,
+                "words_count": 91,
+                "completed_at": null,
+                "completed_by": null,
+                "completed_by_email": null
+            },
+            {
+                "language_iso": "ru",
+                "users": [
+                    {
+                        "user_id": 422,
+                        "email": "jfox@mycompany.com",
+                        "fullname": "James Fox"
+                    }
+                ],
+                "keys": [
+                    11212, 11241, 11245
+                ],
+                "status": "in progress",
+                "progress": 0,
+                "initial_tm_leverage": [],
+                "words": 91,
+                "completed_at": null,
+                "completed_by": null,
+                "completed_by_email": null
+            }
+        ],
+        "auto_close_languages": true,
+        "auto_close_task": true,
+        "completed_at": null,
+        "completed_by": null,
+        "completed_by_email": null
+    }
+}
