@@ -1,0 +1,19 @@
+{
+    "team_id": 18821,
+    "team_users": [
+        {
+            "user_id": 420,
+            "email": "jdoe@mycompany.com",
+            "fullname": "John Doe",
+            "created_at": "2018-12-31 12:00:00 (Etc\/UTC)",
+            "role": "owner"
+        },
+        {
+            "user_id": 421,
+            "email": "axel@mycompany.com",
+            "fullname": "Axel Foley",
+            "created_at": "2018-12-31 12:00:00 (Etc\/UTC)",
+            "role": "member"
+        }
+    ]
+}
