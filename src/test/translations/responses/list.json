@@ -1,0 +1,29 @@
+{
+    "project_id": "20008339586cded200e0d8.29879849",
+    "translations": [
+        {
+            "translation_id": 344412,
+            "key_id": 553662,
+            "language_iso": "en_US",
+            "modified_at": "2018-12-31 12:00:00 (Etc\/UTC)",
+            "modified_by": 420,
+            "modified_by_email": "user@mycompany.com",
+            "translation": "Hello, world!",
+            "is_fuzzy": true,
+            "is_reviewed": false,
+            "words": 2
+        },
+        {
+            "translation_id": 344417,
+            "key_id": 553662,
+            "language_iso": "ru",
+            "modified_at": "2018-12-31 12:00:00 (Etc\/UTC)",
+            "modified_by": 420,
+            "modified_by_email": "user@mycompany.com",
+            "translation": "Привет, мир!",
+            "is_fuzzy": false,
+            "is_reviewed": false,
+            "words": 2
+        }
+    ]
+}

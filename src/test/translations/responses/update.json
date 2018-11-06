@@ -1,0 +1,15 @@
+{
+    "project_id": "3002780358964f9bab5a92.87762498",
+    "translation": {
+        "translation_id": 344412,
+        "key_id": 553662,
+        "language_iso": "en_US",
+        "modified_at": "2018-12-31 12:00:00 (Etc\/UTC)",
+        "modified_by": 420,
+        "modified_by_email": "user@mycompany.com",
+        "translation": "Quick brown fox jumps over the lazy dog.",
+        "is_fuzzy": false,
+        "is_reviewed": true,
+        "words": 8
+    }
+}
