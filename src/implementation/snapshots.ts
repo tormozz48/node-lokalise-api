@@ -17,7 +17,7 @@ export class Snapshots extends Base implements ISnapshots {
     }
 
     restore(projectId: string, snapshotId: number): Promise<object> {
-        return this.request.post({body: {}, url: `/projects/{project_id}/snapshots`});
+        return this.request.post({body: {}, url: `/projects/${projectId}/snapshots/${snapshotId}`});
     }
 
     delete(projectId: string, snapshotId: number):

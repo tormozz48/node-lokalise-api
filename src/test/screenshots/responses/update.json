@@ -1,0 +1,17 @@
+{
+    "project_id": "20008339586cded200e0d8.29879849",
+    "screenshot": {
+        "screenshot_id": 403021,
+        "url": "https://s3-eu-west-1.amazonaws.com/files/screenshots/welcome.jpg",
+        "key_ids": [
+            1132290, 1132292
+        ],
+        "title": "Welcome screen",
+        "description" : "",
+        "tags": [
+            "main"
+        ],
+        "width": 1024,
+        "height": 768
+    }
+}

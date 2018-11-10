@@ -1,0 +1,35 @@
+{
+    "project_id": "20008339586cded200e0d8.29879849",
+    "screenshots": [
+        {
+            "screenshot_id": 403021,
+            "data": "",
+            "title": "Welcome screen",
+            "description" : "",
+            "key_ids": [
+                1132290, 1132292, 1132293
+            ],
+            "tags": [
+                "onboarding",
+                "main"
+            ],
+            "width": 1024,
+            "height": 768
+
+        },
+        {
+            "screenshot_id": 403022,
+            "title": "Login screen",
+            "description" : "",
+            "key_ids": [
+                1132290, 1132292, 1132293
+            ],
+            "tags": [
+                "onboarding",
+                "main"
+            ],
+            "width": 1024,
+            "height": 768
+        }
+    ]
+}
