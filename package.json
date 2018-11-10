@@ -32,6 +32,7 @@
     "check": "npm outdated",
     "pretest": "npm run lint && npm run build",
     "test": "mocha --opts mocha.opts",
+    "cover": "istanbul cover ./node_modules/mocha/bin/_mocha -- --opts mocha.opts",
     "precommit": "npm run lint",
     "prepush": "npm test",
     "watch": "tsc -w"
@@ -52,6 +53,7 @@
     "mocha": "^4.0.1",
     "nock": "^10.0.2",
     "npm": "^6.4.1",
+    "remap-istanbul": "^0.12.0",
     "sinon": "^7.0.0",
     "tslint": "^5.7.0",
     "typedoc": "^0.13.0",

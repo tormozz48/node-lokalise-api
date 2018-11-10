@@ -3,8 +3,8 @@ node_js:
   - '6'
   - '7'
   - '8'
+  - '9'
+  - '10'
 script:
-  - npm run prepush
-    # get the coverage metrics to coveralls
-  - remap-istanbul -i coverage/typescript/coverage.json -o coverage/typescript/lcov.info -t lcovonly
+  - npm run cover
   - cat coverage/typescript/lcov.info | ./node_modules/coveralls/bin/coveralls.js
