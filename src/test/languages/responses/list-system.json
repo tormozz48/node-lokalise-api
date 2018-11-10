@@ -1,0 +1,22 @@
+{
+    "languages": [
+        {
+            "lang_id": 640,
+            "lang_iso": "en",
+            "lang_name": "English",
+            "is_rtl": false,
+            "plural_forms": [
+                "one", "other"
+            ]
+        },
+        {
+            "lang_id": 597,
+            "lang_iso": "ru",
+            "lang_name": "Russian",
+            "is_rtl": false,
+            "plural_forms": [
+                "one", "few", "many", "other"
+            ]
+        }
+    ]
+}
