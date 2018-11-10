@@ -1,0 +1,23 @@
+{
+    "contributors": [
+        {
+            "email": "translator@mycompany.com",
+            "fullname": "Mr. Translator",
+            "is_admin": false,
+            "is_reviewer": true,
+            "languages": [
+                {
+                    "lang_iso": "en",
+                    "is_writable": false
+                },
+                {
+                    "lang_iso": "ru",
+                    "is_writable": true
+                }
+            ],
+            "admin_rights": [
+                "keys", "languages"
+            ]
+        }
+    ]
+}

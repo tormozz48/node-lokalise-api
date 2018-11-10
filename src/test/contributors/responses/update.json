@@ -1,0 +1,23 @@
+{
+    "project_id": "3002780358964f9bab5a92.87762498",
+    "contributor": {
+        "user_id": 421,
+        "email": "translator@mycompany.com",
+        "fullname": "Mr. Translator",
+        "is_admin": true,
+        "is_reviwer": true,
+        "languages": [
+            {
+                "lang_iso": "en",
+                "is_writable": true
+            },
+            {
+                "lang_iso": "ru",
+                "is_writable": true
+            }
+        ],
+        "admin_rights": [
+            "keys", "languages"
+        ]
+    }
+}
