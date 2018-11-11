@@ -1,15 +1,15 @@
 import * as nock from 'nock';
 import {expect} from 'chai';
 import * as helper from '../helper';
-import LokalizeAPI from '../../index';
+import LokaliseAPI from '../../index';
 
 const SCOPE = 'translations';
 
 describe(`api/${SCOPE}`, () => {
-    let lokalizeAPI;
+    let lokaliseAPI;
 
     beforeEach(() => {
-        lokalizeAPI = new LokalizeAPI({baseUrl: helper.BASE_URL, token: '1234567890'});
+        lokaliseAPI = new LokaliseAPI({baseUrl: helper.BASE_URL, token: '1234567890'});
     });
 
     describe('list', () => {
@@ -19,7 +19,7 @@ describe(`api/${SCOPE}`, () => {
                 .query({page: 1, limit: 100})
                 .reply(200, helper.getResponse(SCOPE, 'list.json'));
 
-            const result = await lokalizeAPI.translations.list('abcde.12345', {page: 1, limit: 100});
+            const result = await lokaliseAPI.translations.list('abcde.12345', {page: 1, limit: 100});
             expect(result).to.eql(helper.getResponse(SCOPE, 'list.json'));
         });
     });
@@ -30,7 +30,7 @@ describe(`api/${SCOPE}`, () => {
                 .get('/projects/abcde.12345/translations/567')
                 .reply(200, helper.getResponse(SCOPE, 'get.json'));
 
-            const result = await lokalizeAPI.translations.get('abcde.12345', 567);
+            const result = await lokaliseAPI.translations.get('abcde.12345', 567);
             expect(result).to.eql(helper.getResponse(SCOPE, 'get.json'));
         });
     });
@@ -44,7 +44,7 @@ describe(`api/${SCOPE}`, () => {
                 )
                 .reply(200, helper.getResponse(SCOPE, 'update.json'));
 
-            const result = await lokalizeAPI.translations
+            const result = await lokaliseAPI.translations
                 .update('abcde.12345', 567, helper.getRequest(SCOPE, 'update.json'));
             expect(result).to.eql(helper.getResponse(SCOPE, 'update.json'));
         });
