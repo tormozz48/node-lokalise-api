@@ -1,0 +1,11 @@
+.vscode
+coverage
+docs
+src
+.appveyor
+.editorconfig
+.travis.yml
+coverageconfig.json
+mocha.opts
+tsconfig.json
+tslint.json
