@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>node-localise-api</title>
+	<title>node-lokalise-api</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">node-localise-api</a>
+					<a href="index.html" class="title">node-lokalise-api</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -56,7 +56,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> node-localise-api</h1>
+			<h1> node-lokalise-api</h1>
 		</div>
 	</div>
 </header>
@@ -76,7 +76,7 @@
 								<li class="tsd-kind-class"><a href="classes/files.html" class="tsd-kind-icon">Files</a></li>
 								<li class="tsd-kind-class"><a href="classes/keys.html" class="tsd-kind-icon">Keys</a></li>
 								<li class="tsd-kind-class"><a href="classes/languages.html" class="tsd-kind-icon">Languages</a></li>
-								<li class="tsd-kind-class"><a href="classes/localiseapi.html" class="tsd-kind-icon">LocaliseAPI</a></li>
+								<li class="tsd-kind-class"><a href="classes/lokaliseapi.html" class="tsd-kind-icon">LokaliseAPI</a></li>
 								<li class="tsd-kind-class"><a href="classes/projects.html" class="tsd-kind-icon">Projects</a></li>
 								<li class="tsd-kind-class"><a href="classes/request.html" class="tsd-kind-icon">Request</a></li>
 								<li class="tsd-kind-class"><a href="classes/screenshots.html" class="tsd-kind-icon">Screenshots</a></li>
@@ -128,7 +128,102 @@
 								<li class="tsd-kind-interface"><a href="interfaces/itranslations.html" class="tsd-kind-icon">ITranslations</a></li>
 							</ul>
 						</section>
+						<section class="tsd-index-section ">
+							<h3>Variables</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-variable"><a href="globals.html#base_url" class="tsd-kind-icon">BASE_<wbr>URL</a></li>
+								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#scope" class="tsd-kind-icon">SCOPE</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#getrequest" class="tsd-kind-icon">get<wbr>Request</a></li>
+								<li class="tsd-kind-variable"><a href="globals.html#getresponse" class="tsd-kind-icon">get<wbr>Response</a></li>
+							</ul>
+						</section>
+						<section class="tsd-index-section tsd-is-not-exported">
+							<h3>Functions</h3>
+							<ul class="tsd-index-list">
+								<li class="tsd-kind-function tsd-is-not-exported"><a href="globals.html#getjsonfor" class="tsd-kind-icon">get<wbr>Json<wbr>For</a></li>
+							</ul>
+						</section>
 					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Variables</h2>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="base_url" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> BASE_<wbr>URL</h3>
+					<div class="tsd-signature tsd-kind-icon">BASE_<wbr>URL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;https://api.lokalise.co/api2&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/ce9adfe/src/test/helper.ts#L4">test/helper.ts:4</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
+					<a name="scope" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> SCOPE</h3>
+					<div class="tsd-signature tsd-kind-icon">SCOPE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"translations"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;translations&quot;</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/ce9adfe/src/test/comments/comments.ts#L6">test/comments/comments.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/ce9adfe/src/test/contributors/contributors.ts#L6">test/contributors/contributors.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/ce9adfe/src/test/files/files.ts#L6">test/files/files.ts:6</a></li>
+							<li>Defined in test/keys/keys.ts:6</li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/ce9adfe/src/test/languages/languages.ts#L6">test/languages/languages.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/ce9adfe/src/test/projects/projects.ts#L6">test/projects/projects.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/ce9adfe/src/test/screenshots/screenshots.ts#L6">test/screenshots/screenshots.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/ce9adfe/src/test/snapshots/snapshots.ts#L6">test/snapshots/snapshots.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/ce9adfe/src/test/tasks/tasks.ts#L6">test/tasks/tasks.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/ce9adfe/src/test/team-users/team-users.ts#L6">test/team-users/team-users.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/ce9adfe/src/test/teams/teams.ts#L6">test/teams/teams.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/ce9adfe/src/test/translations/translations.ts#L6">test/translations/translations.ts:6</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="getrequest" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Request</h3>
+					<div class="tsd-signature tsd-kind-icon">get<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> =&nbsp;getJsonFor(&#x27;requests&#x27;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/ce9adfe/src/test/helper.ts#L6">test/helper.ts:6</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable">
+					<a name="getresponse" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> get<wbr>Response</h3>
+					<div class="tsd-signature tsd-kind-icon">get<wbr>Response<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> =&nbsp;getJsonFor(&#x27;responses&#x27;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/ce9adfe/src/test/helper.ts#L8">test/helper.ts:8</a></li>
+						</ul>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-not-exported">
+					<a name="getjsonfor" class="tsd-anchor"></a>
+					<h3>get<wbr>Json<wbr>For</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Json<wbr>For<span class="tsd-signature-symbol">(</span>type<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">(Anonymous function)</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/ce9adfe/src/test/helper.ts#L10">test/helper.ts:10</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>type: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">(Anonymous function)</span></h4>
+						</li>
+					</ul>
 				</section>
 			</section>
 		</div>
@@ -161,7 +256,7 @@
 						<a href="classes/languages.html" class="tsd-kind-icon">Languages</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="classes/localiseapi.html" class="tsd-kind-icon">LocaliseAPI</a>
+						<a href="classes/lokaliseapi.html" class="tsd-kind-icon">LokaliseAPI</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/projects.html" class="tsd-kind-icon">Projects</a>
@@ -294,6 +389,21 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/itranslations.html" class="tsd-kind-icon">ITranslations</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#base_url" class="tsd-kind-icon">BASE_<wbr>URL</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#scope" class="tsd-kind-icon">SCOPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getrequest" class="tsd-kind-icon">get<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getresponse" class="tsd-kind-icon">get<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#getjsonfor" class="tsd-kind-icon">get<wbr>Json<wbr>For</a>
 					</li>
 				</ul>
 			</nav>

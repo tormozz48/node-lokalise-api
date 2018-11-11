@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>node-localise-api</title>
+	<title>node-lokalise-api</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="assets/css/main.css">
@@ -22,7 +22,7 @@
 						<li class="state loading">Preparing search index...</li>
 						<li class="state failure">The search index is not available</li>
 					</ul>
-					<a href="index.html" class="title">node-localise-api</a>
+					<a href="index.html" class="title">node-lokalise-api</a>
 				</div>
 				<div class="table-cell" id="tsd-widgets">
 					<div id="tsd-filter">
@@ -56,7 +56,7 @@
 					<a href="globals.html">Globals</a>
 				</li>
 			</ul>
-			<h1> node-localise-api</h1>
+			<h1> node-lokalise-api</h1>
 		</div>
 	</div>
 </header>
@@ -64,21 +64,573 @@
 	<div class="row">
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
-				<h1 id="node-localise-api">node-localise-api</h1>
+				<h1 id="node-lokalise-api">node-lokalise-api</h1>
+				<p>Simple <a href="https://nodejs.org/en/">NodeJS</a> wrapper around <a href="https://lokalise.co">Lokalise</a> service.</p>
 				<!-- badge -->
-				<p><a href="https://www.npmjs.com/package/node-localise-api"><img src="https://img.shields.io/npm/l/node-localise-api.svg" alt="npm license"></a>
-					<a href="https://travis-ci.org/tormozz48/node-localise-api"><img src="https://img.shields.io/travis/tormozz48/node-localise-api.svg" alt="travis status"></a>
-					<a href="https://ci.appveyor.com/project/tormozz48/node-localise-api"><img src="https://ci.appveyor.com/api/projects/status/90am2usst4qeutgi?svg=true" alt="Build status"></a>
-					<a href="https://coveralls.io/github/tormozz48/node-localise-api?branch=master"><img src="https://coveralls.io/repos/github/tormozz48/node-localise-api/badge.svg?branch=master" alt="Coverage Status"></a>
-					<a href="https://david-dm.org/tormozz48/node-localise-api"><img src="https://david-dm.org/tormozz48/node-localise-api/status.svg" alt="David"></a>
-					<a href="https://david-dm.org/tormozz48/node-localise-api?type=dev"><img src="https://david-dm.org/tormozz48/node-localise-api/dev-status.svg" alt="David"></a>
+				<p><a href="https://www.npmjs.com/package/node-lokalise-api"><img src="https://img.shields.io/npm/l/node-lokalise-api.svg" alt="npm license"></a>
+					<a href="https://travis-ci.org/tormozz48/node-lokalise-api"><img src="https://img.shields.io/travis/tormozz48/node-lokalise-api.svg" alt="travis status"></a>
+					<a href="https://ci.appveyor.com/project/tormozz48/node-lokalise-api"><img src="https://ci.appveyor.com/api/projects/status/90am2usst4qeutgi?svg=true" alt="Build status"></a>
+					<a href="https://coveralls.io/github/tormozz48/node-lokalise-api?branch=master"><img src="https://coveralls.io/repos/github/tormozz48/node-lokalise-api/badge.svg?branch=master" alt="Coverage Status"></a>
+					<a href="https://david-dm.org/tormozz48/node-lokalise-api"><img src="https://david-dm.org/tormozz48/node-lokalise-api/status.svg" alt="David"></a>
+					<a href="https://david-dm.org/tormozz48/node-lokalise-api?type=dev"><img src="https://david-dm.org/tormozz48/node-lokalise-api/dev-status.svg" alt="David"></a>
 					<a href="http://commitizen.github.io/cz-cli/"><img src="https://img.shields.io/badge/commitizen-friendly-brightgreen.svg" alt="Commitizen friendly"></a>
 					<br/>
-				<a href="https://nodei.co/npm/node-localise-api/"><img src="https://nodei.co/npm/node-localise-api.png?downloads=true&downloadRank=true&stars=true" alt="NPM"></a></p>
+				<a href="https://nodei.co/npm/node-lokalise-api/"><img src="https://nodei.co/npm/node-lokalise-api.png?downloads=true&downloadRank=true&stars=true" alt="NPM"></a></p>
 				<!-- endbadge -->
+				<p>Localise API documentation can be found <a href="https://lokalise.co/api2docs/node/#resource-getting-started">here</a></p>
+				<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+				<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+				<ul>
+					<li><a href="#install">Install</a></li>
+					<li><a href="#usage">Usage</a></li>
+					<li><a href="#api">API</a><ul>
+							<li><a href="#comments">Comments</a><ul>
+									<li><a href="#list-project-comments">List project comments</a></li>
+									<li><a href="#list-key-comments">List key comments</a></li>
+									<li><a href="#create-comments">Create comments</a></li>
+									<li><a href="#retrieve-a-comment">Retrieve a comment</a></li>
+									<li><a href="#delete-a-comment">Delete a comment</a></li>
+								</ul>
+							</li>
+							<li><a href="#contributors">Contributors</a><ul>
+									<li><a href="#list-all-contributors">List all contributors</a></li>
+									<li><a href="#create-contributors">Create contributors</a></li>
+									<li><a href="#retrieve-a-contributor">Retrieve a contributor</a></li>
+									<li><a href="#update-a-contributor">Update a contributor</a></li>
+									<li><a href="#delete-a-contributor">Delete a contributor</a></li>
+								</ul>
+							</li>
+							<li><a href="#files">Files</a><ul>
+									<li><a href="#list-all-files">List all files</a></li>
+									<li><a href="#upload-a-file">Upload a file</a></li>
+									<li><a href="#download-files">Download files</a></li>
+								</ul>
+							</li>
+							<li><a href="#keys">Keys</a><ul>
+									<li><a href="#list-all-keys">List all keys</a></li>
+									<li><a href="#create-keys">Create keys</a></li>
+									<li><a href="#retrieve-a-key">Retrieve a key</a></li>
+									<li><a href="#update-a-key">Update a key</a></li>
+									<li><a href="#bulk-update">Bulk update</a></li>
+									<li><a href="#delete-multiple-keys">Delete multiple keys</a></li>
+									<li><a href="#delete-a-key">Delete a key</a></li>
+								</ul>
+							</li>
+							<li><a href="#languages">Languages</a><ul>
+									<li><a href="#list-system-languages">List system languages</a></li>
+									<li><a href="#list-project-languages">List project languages</a></li>
+									<li><a href="#create-languages">Create languages</a></li>
+									<li><a href="#retrieve-a-language">Retrieve a language</a></li>
+									<li><a href="#update-a-language">Update a language</a></li>
+									<li><a href="#delete-a-language">Delete a language</a></li>
+								</ul>
+							</li>
+							<li><a href="#projects">Projects</a><ul>
+									<li><a href="#list-all-projects">List all projects</a></li>
+									<li><a href="#create-a-project">Create a project</a></li>
+									<li><a href="#retrieve-a-project">Retrieve a project</a></li>
+									<li><a href="#update-a-project">Update a project</a></li>
+									<li><a href="#empty-a-project">Empty a project</a></li>
+									<li><a href="#delete-a-project">Delete a project</a></li>
+								</ul>
+							</li>
+							<li><a href="#screenshots">Screenshots</a><ul>
+									<li><a href="#list-all-screenshots">List all screenshots</a></li>
+									<li><a href="#create-screenshots">Create screenshots</a></li>
+									<li><a href="#retrieve-a-screenshot">Retrieve a screenshot</a></li>
+									<li><a href="#update-a-screenshot">Update a screenshot</a></li>
+									<li><a href="#delete-a-screenshot">Delete a screenshot</a></li>
+								</ul>
+							</li>
+							<li><a href="#snapshots">Snapshots</a><ul>
+									<li><a href="#list-all-snapshots">List all snapshots</a></li>
+									<li><a href="#create-a-snapshot">Create a snapshot</a></li>
+									<li><a href="#restore-a-snapshot">Restore a snapshot</a></li>
+									<li><a href="#delete-a-snapshot">Delete a snapshot</a></li>
+								</ul>
+							</li>
+							<li><a href="#tasks">Tasks</a><ul>
+									<li><a href="#list-all-tasks">List all tasks</a></li>
+									<li><a href="#create-a-task">Create a task</a></li>
+									<li><a href="#retrieve-a-task">Retrieve a task</a></li>
+									<li><a href="#update-a-task">Update a task</a></li>
+									<li><a href="#delete-a-task">Delete a task</a></li>
+								</ul>
+							</li>
+							<li><a href="#team-users">Team Users</a><ul>
+									<li><a href="#list-all-team-users">List all team users</a></li>
+									<li><a href="#retrieve-a-team-user">Retrieve a team user</a></li>
+									<li><a href="#update-a-team-user">Update a team user</a></li>
+									<li><a href="#delete-a-team-user">Delete a team user</a></li>
+								</ul>
+							</li>
+							<li><a href="#teams">Teams</a><ul>
+									<li><a href="#list-all-teams">List all teams</a></li>
+								</ul>
+							</li>
+							<li><a href="#translations">Translations</a><ul>
+									<li><a href="#list-all-translations">List all translations</a></li>
+									<li><a href="#retrieve-a-translation">Retrieve a translation</a></li>
+									<li><a href="#update-a-translation">Update a translation</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#development">Development</a></li>
+					<li><a href="#license">License</a></li>
+					<li><a href="#support">Support</a></li>
+				</ul>
+				<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+				<h2 id="install">Install</h2>
+				<p>Install package as yet another npm library with command:</p>
+				<pre><code class="language-bash">npm install node-lokalise-api</code></pre>
+				<p>Also you can use another package manager, for example <a href="https://yarnpkg.com/lang/en/">yarn</a>:</p>
+				<pre><code class="language-bash">yarn add node-lokalise-api</code></pre>
+				<h2 id="usage">Usage</h2>
+				<h2 id="api">API</h2>
+				<h3 id="comments">Comments</h3>
+				<h4 id="list-project-comments">List project comments</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-list-project-comments-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.comments.list(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-literal">null</span>, {<span class="hljs-attr">page</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">limit</span>: <span class="hljs-number">100</span>});</code></pre>
+				<h4 id="list-key-comments">List key comments</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-list-key-comments-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.comments.list(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;key id&gt;'</span>, {<span class="hljs-attr">page</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">limit</span>: <span class="hljs-number">100</span>});</code></pre>
+				<h4 id="create-comments">Create comments</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-create-comments-post">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.comments.create(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;key id&gt;'</span>, {
+    <span class="hljs-attr">comments</span>: [
+        {<span class="hljs-attr">comment</span>: <span class="hljs-string">'This is a test.'</span>},
+        {<span class="hljs-attr">comment</span>: <span class="hljs-string">'Adding multiple comments.'</span>}
+    ]
+});</code></pre>
+				<h4 id="retrieve-a-comment">Retrieve a comment</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-retrieve-a-comment-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.comments.get(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;key id&gt;'</span>, <span class="hljs-string">'&lt;comment id&gt;'</span>);</code></pre>
+				<h4 id="delete-a-comment">Delete a comment</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-retrieve-a-comment-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.comments.delete(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;key id&gt;'</span>, <span class="hljs-string">'&lt;comment id&gt;'</span>);</code></pre>
+				<h3 id="contributors">Contributors</h3>
+				<h4 id="list-all-contributors">List all contributors</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-list-all-contributors-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.contributors.list(<span class="hljs-string">'&lt;project id&gt;'</span>, {<span class="hljs-attr">page</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">limit</span>: <span class="hljs-number">100</span>});</code></pre>
+				<h4 id="create-contributors">Create contributors</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-create-contributors-post">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.contributors.create(<span class="hljs-string">'&lt;project id&gt;'</span>, {
+    <span class="hljs-attr">contributors</span>: [
+        {
+            <span class="hljs-attr">email</span>: <span class="hljs-string">'translator@mycompany.com'</span>,
+            <span class="hljs-attr">fullname</span>: <span class="hljs-string">'Mr. Translator'</span>,
+            <span class="hljs-attr">is_admin</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">is_reviewer</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-attr">languages</span>: [
+                {
+                    <span class="hljs-attr">lang_iso</span>: en,
+                    <span class="hljs-attr">is_writable</span>: <span class="hljs-literal">false</span>
+                },
+                {
+                    <span class="hljs-attr">lang_iso</span>: ru,
+                    <span class="hljs-attr">is_writable</span>: <span class="hljs-literal">true</span>
+                }
+            ],
+            <span class="hljs-attr">admin_rights</span>: [
+                <span class="hljs-string">'keys'</span>, <span class="hljs-string">'languages'</span>
+            ]
+        }
+    ]
+});</code></pre>
+				<h4 id="retrieve-a-contributor">Retrieve a contributor</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-retrieve-a-contributor-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.contributors.get(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;contributor id&gt;'</span>);</code></pre>
+				<h4 id="update-a-contributor">Update a contributor</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-update-a-contributor-put">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.contributors.update(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;contributor id&gt;'</span>, {
+    <span class="hljs-attr">is_admin</span>: <span class="hljs-literal">true</span>
+});</code></pre>
+				<h4 id="delete-a-contributor">Delete a contributor</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-delete-a-contributor-delete">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.contributors.delete(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;contributor id&gt;'</span>);</code></pre>
+				<h3 id="files">Files</h3>
+				<h4 id="list-all-files">List all files</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-list-all-files-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.files.list(<span class="hljs-string">'&lt;project id&gt;'</span>, {<span class="hljs-attr">page</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">limit</span>: <span class="hljs-number">100</span>});</code></pre>
+				<h4 id="upload-a-file">Upload a file</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-upload-a-file-post">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.files.upload(<span class="hljs-string">'&lt;project id&gt;'</span>, {
+    <span class="hljs-attr">filename</span>: <span class="hljs-string">'index.json'</span>,
+    <span class="hljs-attr">data</span>: <span class="hljs-string">'D94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGL.....'</span>,
+    <span class="hljs-attr">lang_iso</span>: <span class="hljs-string">'en'</span>,
+    <span class="hljs-attr">tags</span>: [
+        <span class="hljs-string">'index'</span>, <span class="hljs-string">'admin'</span>, <span class="hljs-string">'v2.0'</span>
+    ],
+    <span class="hljs-attr">convert_placeholders</span>: <span class="hljs-literal">true</span>
+});</code></pre>
+				<h4 id="download-files">Download files</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-download-files-post">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.files.download(<span class="hljs-string">'&lt;project id&gt;'</span>, {
+    <span class="hljs-attr">format</span>: <span class="hljs-string">'json'</span>,
+    <span class="hljs-attr">original_filenames</span>: <span class="hljs-literal">true</span>
+});</code></pre>
+				<h3 id="keys">Keys</h3>
+				<h4 id="list-all-keys">List all keys</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-list-all-keys-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});</code></pre>
+				<h4 id="create-keys">Create keys</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-create-keys-post">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});</code></pre>
+				<h4 id="retrieve-a-key">Retrieve a key</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-retrieve-a-key-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});</code></pre>
+				<h4 id="update-a-key">Update a key</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-update-a-key-put">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});</code></pre>
+				<h4 id="bulk-update">Bulk update</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-bulk-update-put">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});</code></pre>
+				<h4 id="delete-multiple-keys">Delete multiple keys</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-delete-multiple-keys-delete">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});</code></pre>
+				<h4 id="delete-a-key">Delete a key</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-delete-a-key-delete">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});</code></pre>
+				<h3 id="languages">Languages</h3>
+				<h4 id="list-system-languages">List system languages</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-list-system-languages-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.languages.list(<span class="hljs-literal">null</span>, {<span class="hljs-attr">page</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">limit</span>: <span class="hljs-number">100</span>});</code></pre>
+				<h4 id="list-project-languages">List project languages</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-list-project-languages-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.languages.list(<span class="hljs-string">'&lt;project id&gt;'</span>, {<span class="hljs-attr">page</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">limit</span>: <span class="hljs-number">100</span>});</code></pre>
+				<h4 id="create-languages">Create languages</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-create-languages-post">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.languages.create(<span class="hljs-string">'&lt;project id&gt;'</span>, {
+    <span class="hljs-attr">languages</span>: [
+        {<span class="hljs-attr">lang_iso</span>: <span class="hljs-string">'en'</span>},
+        {<span class="hljs-attr">lang_iso</span>: <span class="hljs-string">'ru'</span>}
+    ]
+});</code></pre>
+				<h4 id="retrieve-a-language">Retrieve a language</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-retrieve-a-language-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.languages.get(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;language id&gt;'</span>);</code></pre>
+				<h4 id="update-a-language">Update a language</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-update-a-language-put">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.languages.update(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;language id&gt;'</span>, {
+    <span class="hljs-attr">lang_iso</span>: <span class="hljs-string">'en-US'</span>,
+    <span class="hljs-attr">plural_forms</span>: [
+        <span class="hljs-string">'one'</span>, <span class="hljs-string">'zero'</span>, <span class="hljs-string">'few'</span>, <span class="hljs-string">'other'</span>
+    ]
+});</code></pre>
+				<h4 id="delete-a-language">Delete a language</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-delete-a-language-delete">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.languages.delete(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;language id&gt;'</span>);</code></pre>
+				<h3 id="projects">Projects</h3>
+				<h4 id="list-all-projects">List all projects</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-list-all-projects-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.projects.list({<span class="hljs-attr">page</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">limit</span>: <span class="hljs-number">100</span>});</code></pre>
+				<h4 id="create-a-project">Create a project</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-create-a-project-post">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.projects.create({
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'TheApp Project'</span>,
+    <span class="hljs-attr">description</span>: <span class="hljs-string">'iOS + Android strings of TheApp. https://theapp.com'</span>
+});</code></pre>
+				<h4 id="retrieve-a-project">Retrieve a project</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-retrieve-a-project-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.projects.get(<span class="hljs-string">'&lt;project id&gt;'</span>);</code></pre>
+				<h4 id="update-a-project">Update a project</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-update-a-project-put">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.projects.update(<span class="hljs-string">'&lt;project id&gt;'</span>, {
+    <span class="hljs-attr">name</span>: <span class="hljs-string">'TheZapp Project'</span>,
+    <span class="hljs-attr">description</span>: <span class="hljs-string">'iOS + Android strings of TheZapp. https://thezapp.com'</span>
+});</code></pre>
+				<h4 id="empty-a-project">Empty a project</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-empty-a-project-put">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.projects.empty(<span class="hljs-string">'&lt;project id&gt;'</span>);</code></pre>
+				<h4 id="delete-a-project">Delete a project</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-delete-a-project-delete">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.projects.delete(<span class="hljs-string">'&lt;project id&gt;'</span>);</code></pre>
+				<h3 id="screenshots">Screenshots</h3>
+				<h4 id="list-all-screenshots">List all screenshots</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-list-all-screenshots-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.screenshots.list(<span class="hljs-string">'&lt;project id&gt;'</span>, {<span class="hljs-attr">page</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">limit</span>: <span class="hljs-number">100</span>});</code></pre>
+				<h4 id="create-screenshots">Create screenshots</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-create-screenshots-post">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.screenshots.create(<span class="hljs-string">'&lt;project id&gt;'</span>, {
+    <span class="hljs-attr">screenshots</span>: [
+        {
+            <span class="hljs-attr">data</span>: <span class="hljs-string">'data:image/jpeg;base64,D94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGL'</span>,
+            <span class="hljs-attr">ocr</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-attr">key_ids</span>: [
+                <span class="hljs-number">1132290</span>, <span class="hljs-number">1132292</span>, <span class="hljs-number">1132293</span>
+            ],
+            <span class="hljs-attr">tags</span>: [
+                <span class="hljs-string">'onboarding'</span>
+            ]
+        }
+    ]
+});</code></pre>
+				<h4 id="retrieve-a-screenshot">Retrieve a screenshot</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-retrieve-a-screenshot-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.screenshots.get(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;screenshot id&gt;'</span>);</code></pre>
+				<h4 id="update-a-screenshot">Update a screenshot</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-update-a-screenshot-put">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.screenshots.update(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;screenshot id&gt;'</span>, {
+    <span class="hljs-attr">key_ids</span>: [
+        <span class="hljs-number">1132290</span>, <span class="hljs-number">1132292</span>
+    ],
+    <span class="hljs-attr">tags</span>: [
+        <span class="hljs-string">'main'</span>
+    ]
+});</code></pre>
+				<h4 id="delete-a-screenshot">Delete a screenshot</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-delete-a-screenshot-delete">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.screenshots.delete(<span class="hljs-string">'abcde.12345'</span>, <span class="hljs-number">567</span>);</code></pre>
+				<h3 id="snapshots">Snapshots</h3>
+				<h4 id="list-all-snapshots">List all snapshots</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-list-all-snapshots-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.snapshots.list(<span class="hljs-string">'&lt;project id&gt;'</span>, {<span class="hljs-attr">page</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">limit</span>: <span class="hljs-number">100</span>});</code></pre>
+				<h4 id="create-a-snapshot">Create a snapshot</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-create-a-snapshot-post">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.snapshots.create(<span class="hljs-string">'&lt;project id&gt;'</span>, {
+    <span class="hljs-attr">title</span>: <span class="hljs-string">'API snapshot'</span>
+});</code></pre>
+				<h4 id="restore-a-snapshot">Restore a snapshot</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-restore-a-snapshot-post">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.snapshots.restore(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;snapshot id&gt;'</span>);</code></pre>
+				<h4 id="delete-a-snapshot">Delete a snapshot</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-delete-a-snapshot-delete">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.snapshots.delete(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;snapshot id&gt;'</span>);</code></pre>
+				<h3 id="tasks">Tasks</h3>
+				<h4 id="list-all-tasks">List all tasks</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-list-all-tasks-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.tasks.list(<span class="hljs-string">'&lt;project id&gt;'</span>, {<span class="hljs-attr">page</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">limit</span>: <span class="hljs-number">100</span>});</code></pre>
+				<h4 id="create-a-task">Create a task</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-create-a-task-post">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.tasks.create(<span class="hljs-string">'&lt;project id&gt;'</span>, {
+    <span class="hljs-attr">title</span>: <span class="hljs-string">'Voicemail messages'</span>,
+    <span class="hljs-attr">description</span>: <span class="hljs-string">'Need your help with some voicemail message translation. Thanks!'</span>,
+    <span class="hljs-attr">due_date</span>: <span class="hljs-string">'2018-12-31 12:00:00 (Etc\/UTC)'</span>,
+    <span class="hljs-attr">keys</span>: [<span class="hljs-number">11212</span>, <span class="hljs-number">11241</span>, <span class="hljs-number">11245</span>],
+    <span class="hljs-attr">languages</span>: [
+        {
+            <span class="hljs-attr">language_iso</span>: <span class="hljs-string">'fi'</span>,
+            <span class="hljs-attr">users</span>: [<span class="hljs-number">421</span>]
+        },
+        {
+            <span class="hljs-attr">language_iso</span>: <span class="hljs-string">'ru'</span>,
+            <span class="hljs-attr">users</span>: [<span class="hljs-number">422</span>]
+        }
+    ],
+    <span class="hljs-attr">auto_close_languages</span>: <span class="hljs-literal">true</span>,
+    <span class="hljs-attr">auto_close_task</span>: <span class="hljs-literal">true</span>
+});</code></pre>
+				<h4 id="retrieve-a-task">Retrieve a task</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-retrieve-a-task-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.tasks.get(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;task id&gt;'</span>);</code></pre>
+				<h4 id="update-a-task">Update a task</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-update-a-task-put">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.tasks.update(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;task id&gt;'</span>, {
+    <span class="hljs-attr">due_date</span>: <span class="hljs-string">'2019-12-31 12:00:00 (Etc\/UTC)'</span>,
+    <span class="hljs-attr">auto_close_languages</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">auto_close_task</span>: <span class="hljs-literal">false</span>
+});</code></pre>
+				<h4 id="delete-a-task">Delete a task</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-delete-a-task-delete">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.tasks.delete(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;task id&gt;'</span>);</code></pre>
+				<h3 id="team-users">Team Users</h3>
+				<h4 id="list-all-team-users">List all team users</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-list-all-team-users-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.teamUsers.list(<span class="hljs-string">'&lt;team id&gt;'</span>, {<span class="hljs-attr">page</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">limit</span>: <span class="hljs-number">100</span>});</code></pre>
+				<h4 id="retrieve-a-team-user">Retrieve a team user</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-retrieve-a-team-user-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.teamUsers.get(<span class="hljs-string">'&lt;team id&gt;'</span>, <span class="hljs-string">'&lt;user id&gt;'</span>);</code></pre>
+				<h4 id="update-a-team-user">Update a team user</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-update-a-team-user-put">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.teamUsers.update(<span class="hljs-string">'&lt;team id&gt;'</span>, <span class="hljs-string">'&lt;user id&gt;'</span>, {
+     <span class="hljs-attr">role</span>: <span class="hljs-string">'admin'</span>
+});</code></pre>
+				<h4 id="delete-a-team-user">Delete a team user</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-delete-a-team-user-delete">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.teamUsers.delete(<span class="hljs-string">'&lt;team id&gt;'</span>, <span class="hljs-string">'&lt;user id&gt;'</span>);</code></pre>
+				<h3 id="teams">Teams</h3>
+				<h4 id="list-all-teams">List all teams</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-list-all-teams-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.teams.list({<span class="hljs-attr">page</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">limit</span>: <span class="hljs-number">100</span>});</code></pre>
+				<h3 id="translations">Translations</h3>
+				<h4 id="list-all-translations">List all translations</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-list-all-translations-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.translations.list(<span class="hljs-string">'&lt;project id&gt;'</span>, {<span class="hljs-attr">page</span>: <span class="hljs-number">1</span>, <span class="hljs-attr">limit</span>: <span class="hljs-number">100</span>});</code></pre>
+				<h4 id="retrieve-a-translation">Retrieve a translation</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-retrieve-a-translation-get">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.translations.get(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;translation id&gt;'</span>);</code></pre>
+				<h4 id="update-a-translation">Update a translation</h4>
+				<p><a href="https://lokalise.co/api2docs/node/#transition-update-a-translation-put">Documentation</a></p>
+				<pre><code class="language-js"><span class="hljs-keyword">const</span> LokaliseAPI = <span class="hljs-built_in">require</span>(<span class="hljs-string">'node-localise-api'</span>);
+<span class="hljs-keyword">const</span> api = <span class="hljs-keyword">new</span> LokaliseAPI({<span class="hljs-attr">token</span>: <span class="hljs-string">'&lt;your-lokalise-api-token&gt;'</span>});
+
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">await</span> api.translations.update(<span class="hljs-string">'&lt;project id&gt;'</span>, <span class="hljs-string">'&lt;translation id&gt;'</span>, {
+    <span class="hljs-attr">translation</span>: <span class="hljs-string">'Quick brown fox jumps over the lazy dog.'</span>,
+    <span class="hljs-attr">is_fuzzy</span>: <span class="hljs-literal">false</span>,
+    <span class="hljs-attr">is_reviewed</span>: <span class="hljs-literal">true</span>
+});</code></pre>
+				<h2 id="development">Development</h2>
+				<p>Clone repository or its fork to local filesystem</p>
+				<pre><code class="language-bash">git <span class="hljs-built_in">clone</span> https://github.com/tormozz48/node-lokalise-api.git</code></pre>
+				<p>Install npm dependencies:</p>
+				<pre><code class="language-bash">npm install</code></pre>
+				<p>Here are some suitable commands that can be used during development:</p>
+				<ul>
+					<li><code>npm run build</code> - compile <a href="https://www.typescriptlang.org/index.html">typescript</a> files</li>
+					<li><code>npm run docs</code> - create documentation based on jsdocs</li>
+					<li><code>npm run lint</code> - run <a href="https://palantir.github.io/tslint/">tslint</a> verification tool</li>
+					<li><code>npm run test</code> - run tests with <a href="https://mochajs.org">mocha</a></li>
+					<li><code>npm run cover</code> - calculate code test coverage with <a href="https://github.com/gotwarlost/istanbul">istanbul</a></li>
+					<li><code>npm run watch</code> - launch watcher for compile source files during development</li>
+				</ul>
 				<h2 id="license">License</h2>
 				<p>Apache-2.0</p>
-				<h2 id="code-of-conduct">Code of Conduct</h2>
 				<h2 id="support">Support</h2>
 				<p>Bugs, PRs, comments, suggestions welcomed!</p>
 			</div>
@@ -112,7 +664,7 @@
 						<a href="classes/languages.html" class="tsd-kind-icon">Languages</a>
 					</li>
 					<li class=" tsd-kind-class">
-						<a href="classes/localiseapi.html" class="tsd-kind-icon">LocaliseAPI</a>
+						<a href="classes/lokaliseapi.html" class="tsd-kind-icon">LokaliseAPI</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/projects.html" class="tsd-kind-icon">Projects</a>
@@ -245,6 +797,21 @@
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/itranslations.html" class="tsd-kind-icon">ITranslations</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#base_url" class="tsd-kind-icon">BASE_<wbr>URL</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#scope" class="tsd-kind-icon">SCOPE</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getrequest" class="tsd-kind-icon">get<wbr>Request</a>
+					</li>
+					<li class=" tsd-kind-variable">
+						<a href="globals.html#getresponse" class="tsd-kind-icon">get<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#getjsonfor" class="tsd-kind-icon">get<wbr>Json<wbr>For</a>
 					</li>
 				</ul>
 			</nav>
