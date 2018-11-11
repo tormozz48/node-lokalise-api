@@ -5,7 +5,6 @@ Simple [NodeJS](https://nodejs.org/en/) wrapper around [Lokalise](https://lokali
 <!-- badge -->
 [![npm license](https://img.shields.io/npm/l/node-lokalise-api.svg)](https://www.npmjs.com/package/node-lokalise-api)
 [![travis status](https://img.shields.io/travis/tormozz48/node-lokalise-api.svg)](https://travis-ci.org/tormozz48/node-lokalise-api)
-[![Build status](https://ci.appveyor.com/api/projects/status/90am2usst4qeutgi?svg=true)](https://ci.appveyor.com/project/tormozz48/node-lokalise-api)
 [![Coverage Status](https://coveralls.io/repos/github/tormozz48/node-lokalise-api/badge.svg?branch=master)](https://coveralls.io/github/tormozz48/node-lokalise-api?branch=master)
 [![David](https://david-dm.org/tormozz48/node-lokalise-api/status.svg)](https://david-dm.org/tormozz48/node-lokalise-api)
 [![David](https://david-dm.org/tormozz48/node-lokalise-api/dev-status.svg)](https://david-dm.org/tormozz48/node-lokalise-api?type=dev)
@@ -15,6 +14,8 @@ Simple [NodeJS](https://nodejs.org/en/) wrapper around [Lokalise](https://lokali
 <!-- endbadge -->
 
 Localise API documentation can be found [here](https://lokalise.co/api2docs/node/#resource-getting-started)
+
+Detail package documentation can be found [here](https://tormozz48.github.io/node-lokalise-api/)
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
