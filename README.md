@@ -324,6 +324,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.screenshots.list('<project id>', {page: 1, limit: 100});
 ```
 
 #### Create screenshots
@@ -331,6 +333,21 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.screenshots.create('<project id>', {
+    screenshots: [
+        {
+            data: 'data:image/jpeg;base64,D94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGL',
+            ocr: false,
+            key_ids: [
+                1132290, 1132292, 1132293
+            ],
+            tags: [
+                'onboarding'
+            ]
+        }
+    ]
+});
 ```
 
 #### Retrieve a screenshot
@@ -338,6 +355,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.screenshots.get('<project id>', '<screenshot id>');
 ```
 
 #### Update a screenshot
@@ -345,6 +364,15 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.screenshots.update('<project id>', '<screenshot id>', {
+    key_ids: [
+        1132290, 1132292
+    ],
+    tags: [
+        'main'
+    ]
+});
 ```
 
 #### Delete a screenshot
@@ -352,6 +380,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.screenshots.delete('abcde.12345', 567);
 ```
 
 ### Snapshots
@@ -361,6 +391,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.snapshots.list('<project id>', {page: 1, limit: 100});
 ```
 
 #### Create a snapshot
@@ -368,6 +400,10 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.snapshots.create('<project id>', {
+    title: 'API snapshot'
+});
 ```
 
 #### Restore a snapshot
@@ -375,6 +411,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.snapshots.restore('<project id>', '<snapshot id>');
 ```
 
 #### Delete a snapshot
@@ -382,6 +420,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.snapshots.delete('<project id>', '<snapshot id>');
 ```
 
 ### Tasks
@@ -392,7 +432,7 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 
-const result = await lokaliseAPI.tasks.list('<project id>', {page: 1, limit: 100});
+const result = await api.tasks.list('<project id>', {page: 1, limit: 100});
 ```
 
 #### Create a task
@@ -401,7 +441,7 @@ const result = await lokaliseAPI.tasks.list('<project id>', {page: 1, limit: 100
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 
-const result = await lokaliseAPI.tasks.create('<project id>', {
+const result = await api.tasks.create('<project id>', {
     title: 'Voicemail messages',
     description: 'Need your help with some voicemail message translation. Thanks!',
     due_date: '2018-12-31 12:00:00 (Etc\/UTC)',
@@ -427,7 +467,7 @@ const result = await lokaliseAPI.tasks.create('<project id>', {
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 
-const result = await lokaliseAPI.tasks.get('<project id>', '<task id>');
+const result = await api.tasks.get('<project id>', '<task id>');
 ```
 
 #### Update a task
@@ -436,7 +476,7 @@ const result = await lokaliseAPI.tasks.get('<project id>', '<task id>');
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 
-const result = await lokaliseAPI.tasks.update('<project id>', '<task id>', {
+const result = await api.tasks.update('<project id>', '<task id>', {
     due_date: '2019-12-31 12:00:00 (Etc\/UTC)',
     auto_close_languages: false,
     auto_close_task: false
@@ -449,7 +489,7 @@ const result = await lokaliseAPI.tasks.update('<project id>', '<task id>', {
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 
-const result = await lokaliseAPI.tasks.delete('<project id>', '<task id>');
+const result = await api.tasks.delete('<project id>', '<task id>');
 ```
 
 ### Team Users
