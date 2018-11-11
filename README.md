@@ -40,6 +40,7 @@ yarn add node-lokalise-api
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 
+const result = await lokaliseAPI.comments.list('<project id>', null, {page: 1, limit: 100});
 ```
 
 #### List key comments
@@ -47,6 +48,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await lokaliseAPI.comments.list('<project id>', '<key id>', {page: 1, limit: 100});
 ```
 
 #### Create comments
@@ -54,6 +57,13 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await lokaliseAPI.comments.create('<project id>', '<key id>', {
+    comments: [
+        {comment: 'This is a test.'},
+        {comment: 'Adding multiple comments.'}
+    ]
+});
 ```
 
 #### Retrieve a comment
@@ -61,6 +71,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await lokaliseAPI.comments.get('<project id>', '<key id>', '<comment id>');
 ```
 
 #### Delete a comment
@@ -68,6 +80,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await lokaliseAPI.comments.delete('<project id>', '<key id>', '<comment id>');
 ```
 
 ### Contributors
@@ -77,6 +91,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await lokaliseAPI.contributors.list('<project id>', {page: 1, limit: 100});
 ```
 
 #### Create contributors
@@ -84,6 +100,30 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await lokaliseAPI.contributors.create('<project id>', {
+    contributors: [
+        {
+            email: 'translator@mycompany.com',
+            fullname: 'Mr. Translator',
+            is_admin: false,
+            is_reviewer: true,
+            languages: [
+                {
+                    lang_iso: en,
+                    is_writable: false
+                },
+                {
+                    lang_iso: ru,
+                    is_writable: true
+                }
+            ],
+            admin_rights: [
+                'keys', 'languages'
+            ]
+        }
+    ]
+});
 ```
 
 #### Retrieve a contributor
@@ -91,6 +131,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await lokaliseAPI.contributors.get('<project id>', '<contributor id>');
 ```
 
 #### Update a contributor
@@ -98,6 +140,10 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await lokaliseAPI.contributors.update('<project id>', '<contributor id>', {
+    is_admin: true
+});
 ```
 
 #### Delete a contributor
@@ -105,6 +151,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await lokaliseAPI.contributors.delete('<project id>', '<contributor id>');
 ```
 
 ### Files
