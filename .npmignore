@@ -9,3 +9,4 @@ coverageconfig.json
 mocha.opts
 tsconfig.json
 tslint.json
+build/test
