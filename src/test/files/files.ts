@@ -1,15 +1,15 @@
 import * as nock from 'nock';
 import {expect} from 'chai';
 import * as helper from '../helper';
-import LocaliseAPI from '../../index';
+import LokalizeAPI from '../../index';
 
 const SCOPE = 'files';
 
 describe(`api/${SCOPE}`, () => {
-    let localiseAPI;
+    let lokalizeAPI;
 
     beforeEach(() => {
-      localiseAPI = new LocaliseAPI({baseUrl: helper.BASE_URL, token: '1234567890'});
+      lokalizeAPI = new LokalizeAPI({baseUrl: helper.BASE_URL, token: '1234567890'});
     });
 
     describe('list', () => {
@@ -19,7 +19,7 @@ describe(`api/${SCOPE}`, () => {
                 .query({page: 1, limit: 100})
                 .reply(200, helper.getResponse(SCOPE, 'list.json'));
 
-            const result = await localiseAPI.files.list('abcde.12345', {page: 1, limit: 100});
+            const result = await lokalizeAPI.files.list('abcde.12345', {page: 1, limit: 100});
             expect(result).to.eql(helper.getResponse(SCOPE, 'list.json'));
         });
     });
@@ -33,7 +33,7 @@ describe(`api/${SCOPE}`, () => {
                 )
                 .reply(200, helper.getResponse(SCOPE, 'upload.json'));
 
-            const result = await localiseAPI.files
+            const result = await lokalizeAPI.files
                 .upload('abcde.12345', helper.getRequest(SCOPE, 'upload.json'));
             expect(result).to.eql(helper.getResponse(SCOPE, 'upload.json'));
         });
@@ -48,7 +48,7 @@ describe(`api/${SCOPE}`, () => {
                 )
                 .reply(200, helper.getResponse(SCOPE, 'download.json'));
 
-            const result = await localiseAPI.files
+            const result = await lokalizeAPI.files
                 .download('abcde.12345', helper.getRequest(SCOPE, 'download.json'));
             expect(result).to.eql(helper.getResponse(SCOPE, 'download.json'));
         });

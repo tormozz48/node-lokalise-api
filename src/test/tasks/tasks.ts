@@ -1,15 +1,15 @@
 import * as nock from 'nock';
 import {expect} from 'chai';
 import * as helper from '../helper';
-import LocaliseAPI from '../../index';
+import LokalizeAPI from '../../index';
 
 const SCOPE = 'tasks';
 
 describe(`api/${SCOPE}`, () => {
-    let localiseAPI;
+    let lokalizeAPI;
 
     beforeEach(() => {
-        localiseAPI = new LocaliseAPI({baseUrl: helper.BASE_URL, token: '1234567890'});
+        lokalizeAPI = new LokalizeAPI({baseUrl: helper.BASE_URL, token: '1234567890'});
     });
 
     describe('list', () => {
@@ -19,7 +19,7 @@ describe(`api/${SCOPE}`, () => {
                 .query({page: 1, limit: 100})
                 .reply(200, helper.getResponse(SCOPE, 'list.json'));
 
-            const result = await localiseAPI.tasks.list('abcde.12345', {page: 1, limit: 100});
+            const result = await lokalizeAPI.tasks.list('abcde.12345', {page: 1, limit: 100});
             expect(result).to.eql(helper.getResponse(SCOPE, 'list.json'));
         });
     });
@@ -30,7 +30,7 @@ describe(`api/${SCOPE}`, () => {
                 .get('/projects/abcde.12345/tasks/567')
                 .reply(200, helper.getResponse(SCOPE, 'get.json'));
 
-            const result = await localiseAPI.tasks.get('abcde.12345', 567);
+            const result = await lokalizeAPI.tasks.get('abcde.12345', 567);
             expect(result).to.eql(helper.getResponse(SCOPE, 'get.json'));
         });
     });
@@ -44,7 +44,7 @@ describe(`api/${SCOPE}`, () => {
                 )
                 .reply(200, helper.getResponse(SCOPE, 'create.json'));
 
-            const result = await localiseAPI.tasks
+            const result = await lokalizeAPI.tasks
                 .create('abcde.12345', helper.getRequest(SCOPE, 'create.json'));
             expect(result).to.eql(helper.getResponse(SCOPE, 'create.json'));
         });
@@ -59,7 +59,7 @@ describe(`api/${SCOPE}`, () => {
                 )
                 .reply(200, helper.getResponse(SCOPE, 'update.json'));
 
-            const result = await localiseAPI.tasks
+            const result = await lokalizeAPI.tasks
                 .update('abcde.12345', 567, helper.getRequest(SCOPE, 'update.json'));
             expect(result).to.eql(helper.getResponse(SCOPE, 'update.json'));
         });
@@ -71,7 +71,7 @@ describe(`api/${SCOPE}`, () => {
                 .delete('/projects/abcde.12345/tasks/567')
                 .reply(200, helper.getResponse(SCOPE, 'delete.json'));
 
-            const result = await localiseAPI.tasks.delete('abcde.12345', 567);
+            const result = await lokalizeAPI.tasks.delete('abcde.12345', 567);
             expect(result).to.eql(helper.getResponse(SCOPE, 'delete.json'));
         });
     });

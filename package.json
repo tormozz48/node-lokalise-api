@@ -1,9 +1,9 @@
 {
-  "name": "node-localise-api",
+  "name": "node-lokalize-api",
   "version": "1.0.0",
-  "description": "Localise API",
+  "description": "Lokalize API",
   "keywords": [
-    "Localise",
+    "Lokalize",
     "API",
     "node",
     "library",
@@ -11,7 +11,7 @@
     "Client"
   ],
   "author": "Andrey Kuznetsov",
-  "repository": "tormozz48/node-localise-api",
+  "repository": "tormozz48/node-lokalize-api",
   "license": "Apache-2.0",
   "private": false,
   "engines": {
@@ -25,7 +25,7 @@
   ],
   "scripts": {
     "build": "npm run clean-build && tsc",
-    "docs": "node_modules/.bin/typedoc --target ES6 --out ./docs ./src --exclude ./test/**/*.ts --name node-localise-api --mode file",
+    "docs": "node_modules/.bin/typedoc --target ES6 --out ./docs ./src --exclude ./test/**/*.ts --name node-lokalize-api --mode file",
     "clean-build": "rm -rf build",
     "clean-coverage": "rm -rf coverage",
     "lint": "tslint -c tslint.json src/**/*.ts",

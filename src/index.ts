@@ -29,7 +29,7 @@ import {Translations} from './implementation/translations';
 
 import {Request} from './internal/request';
 
-export default class LocaliseAPI {
+export default class LokalizeAPI {
     private _comments: IComments;
     private _contributors: IContributors;
     private _files: IFiles;
@@ -69,7 +69,7 @@ export default class LocaliseAPI {
     /**
      * @readonly
      * @returns <IComments>
-     * @memberof LocaliseAPI
+     * @memberof LokalizeAPI
      */
     public get comments() {
         return this._comments;
@@ -78,7 +78,7 @@ export default class LocaliseAPI {
     /**
      * @readonly
      * @returns <IContributors>
-     * @memberof LocaliseAPI
+     * @memberof LokalizeAPI
      */
     public get contributors() {
         return this._contributors;
@@ -87,7 +87,7 @@ export default class LocaliseAPI {
     /**
      * @readonly
      * @returns <IFiles>
-     * @memberof LocaliseAPI
+     * @memberof LokalizeAPI
      */
     public get files() {
         return this._files;
@@ -96,7 +96,7 @@ export default class LocaliseAPI {
     /**
      * @readonly
      * @returns <IKeys>
-     * @memberof LocaliseAPI
+     * @memberof LokalizeAPI
      */
     public get keys() {
         return this._keys;
@@ -105,7 +105,7 @@ export default class LocaliseAPI {
     /**
      * @readonly
      * @returns <ILanguages>
-     * @memberof LocaliseAPI
+     * @memberof LokalizeAPI
      */
     public get languages() {
         return this._languages;
@@ -114,7 +114,7 @@ export default class LocaliseAPI {
     /**
      * @readonly
      * @returns <IProjects>
-     * @memberof LocaliseAPI
+     * @memberof LokalizeAPI
      */
     public get projects() {
         return this._projects;
@@ -123,7 +123,7 @@ export default class LocaliseAPI {
     /**
      * @readonly
      * @returns <IScreenshots>
-     * @memberof LocaliseAPI
+     * @memberof LokalizeAPI
      */
     public get screenshots() {
         return this._screenshots;
@@ -132,7 +132,7 @@ export default class LocaliseAPI {
     /**
      * @readonly
      * @returns <ISnapshots>
-     * @memberof LocaliseAPI
+     * @memberof LokalizeAPI
      */
     public get snapshots() {
         return this._snapshots;
@@ -141,7 +141,7 @@ export default class LocaliseAPI {
     /**
      * @readonly
      * @returns <ITasks>
-     * @memberof LocaliseAPI
+     * @memberof LokalizeAPI
      */
     public get tasks() {
         return this._tasks;
@@ -150,7 +150,7 @@ export default class LocaliseAPI {
     /**
      * @readonly
      * @returns <ITeamUsers>
-     * @memberof LocaliseAPI
+     * @memberof LokalizeAPI
      */
     public get teamUsers() {
         return this._teamUsers;
@@ -159,7 +159,7 @@ export default class LocaliseAPI {
     /**
      * @readonly
      * @returns <ITeams>
-     * @memberof LocaliseAPI
+     * @memberof LokalizeAPI
      */
     public get teams() {
         return this._teams;
@@ -168,7 +168,7 @@ export default class LocaliseAPI {
     /**
      * @readonly
      * @returns <ITranslations>
-     * @memberof LocaliseAPI
+     * @memberof LokalizeAPI
      */
     public get translations() {
         return this._translations;
