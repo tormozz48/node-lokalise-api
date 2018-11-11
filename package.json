@@ -44,7 +44,7 @@
     "cover": "istanbul cover ./node_modules/mocha/bin/_mocha -- --opts mocha.opts",
     "precommit": "npm run lint && npm run doctoc",
     "prepush": "npm test",
-    "prepublish": "publish-please guard && npm run docs && npm run docs-deploy",
+    "prepublish": "publish-please guard",
     "watch": "tsc -w",
     "publish-please": "publish-please"
   },
