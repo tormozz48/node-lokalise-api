@@ -162,6 +162,8 @@ const result = await api.contributors.delete('<project id>', '<contributor id>')
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.files.list('<project id>', {page: 1, limit: 100});
 ```
 
 #### Upload a file
@@ -169,6 +171,16 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.files.upload('<project id>', {
+    filename: 'index.json',
+    data: 'D94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGL.....',
+    lang_iso: 'en',
+    tags: [
+        'index', 'admin', 'v2.0'
+    ],
+    convert_placeholders: true
+});
 ```
 
 #### Download files
@@ -176,6 +188,11 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.files.download('<project id>', {
+    format: 'json',
+    original_filenames: true
+});
 ```
 
 ### Keys
@@ -236,6 +253,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.languages.list(null, {page: 1, limit: 100});
 ```
 
 #### List project languages
@@ -243,6 +262,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.languages.list('<project id>', {page: 1, limit: 100});
 ```
 
 #### Create languages
@@ -250,6 +271,13 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.languages.create('<project id>', {
+    languages: [
+        {lang_iso: 'en'},
+        {lang_iso: 'ru'}
+    ]
+});
 ```
 
 #### Retrieve a language
@@ -257,6 +285,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.languages.get('<project id>', '<language id>');
 ```
 
 #### Update a language
@@ -264,6 +294,13 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.languages.update('<project id>', '<language id>', {
+    lang_iso: 'en-US',
+    plural_forms: [
+        'one', 'zero', 'few', 'other'
+    ]
+});
 ```
 
 #### Delete a language
@@ -271,6 +308,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.languages.delete('<project id>', '<language id>');
 ```
 
 ### Projects
@@ -280,6 +319,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.projects.list({page: 1, limit: 100});
 ```
 
 #### Create a project
@@ -287,6 +328,11 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.projects.create({
+    name: 'TheApp Project',
+    description: 'iOS + Android strings of TheApp. https://theapp.com'
+});
 ```
 
 #### Retrieve a project
@@ -294,6 +340,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.projects.get('<project id>');
 ```
 
 #### Update a project
@@ -301,13 +349,20 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.projects.update('<project id>', {
+    name: 'TheZapp Project',
+    description: 'iOS + Android strings of TheZapp. https://thezapp.com'
+});
 ```
 
-#### Update a project
+#### Empty a project
 [Documentation](https://lokalise.co/api2docs/node/#transition-empty-a-project-put)
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.projects.empty('<project id>');
 ```
 
 #### Delete a project
@@ -315,6 +370,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.projects.delete('<project id>');
 ```
 
 ### Screenshots

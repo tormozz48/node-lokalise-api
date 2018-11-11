@@ -68,8 +68,7 @@ describe(`api/${SCOPE}`, () => {
                 .put('/projects/abcde.12345/empty', {})
                 .reply(200, helper.getResponse(SCOPE, 'empty.json'));
 
-            const result = await lokaliseAPI.projects
-                .empty('abcde.12345', helper.getRequest(SCOPE, 'update.json'));
+            const result = await lokaliseAPI.projects.empty('abcde.12345');
             expect(result).to.eql(helper.getResponse(SCOPE, 'empty.json'));
         });
     });
