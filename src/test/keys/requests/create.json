@@ -1,0 +1,40 @@
+{
+    "keys": [
+        {
+            "key_name": "index.welcome",
+            "description": "Index app welcome",
+            "platforms": [
+                "web"
+            ],
+            "translations": [
+                {
+                    "language_iso": "en",
+                    "translation": "Welcome"
+                }
+            ]
+        },
+        {
+            "key_name": "index.apple",
+            "description": "Welcome apple",
+            "platforms": [
+                "web"
+            ],
+            "is_plural": true,
+            "translations": [
+                {
+                    "language_iso": "en",
+                    "translation": {
+                        "one": "I have one apple",
+                        "other": "I have a lot of apples"
+                    }
+                }
+            ]
+        },
+        {
+            "key_name": "index.hello",
+            "platforms": [
+                "web"
+            ]
+        }
+    ]
+}

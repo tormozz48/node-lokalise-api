@@ -282,6 +282,8 @@ const result = await api.files.download('<project id>', {
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.keys.list('<project id>', {page: 1, limit: 100});
 ```
 
 #### Create keys
@@ -289,6 +291,22 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.keys.create('<project id>', {
+    keys: [
+        {
+            key_name: 'index.welcome',
+            description: 'Index app welcome',
+            platforms: ['web'],
+            translations: [
+                {
+                    language_iso: 'en',
+                    translation: 'Welcome'
+                }
+            ]
+        }
+    ]
+});
 ```
 
 #### Retrieve a key
@@ -296,6 +314,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.keys.get('<project id>', '<key id>');
 ```
 
 #### Update a key
@@ -303,6 +323,11 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.keys.update('<project id>', '<key id>', {
+    platforms: ['web', 'other'],
+    description: 'Index app welcome'
+});
 ```
 
 #### Bulk update
@@ -310,6 +335,23 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.keys.updateMany('<project id>', {
+    keys: [
+        {
+            key_id: 331223,
+            key_name: 'index.welcome',
+            description: 'Index app welcome',
+            platforms: ['web']
+        },
+        {
+            key_id: 331224,
+            key_name: 'index.hello',
+            description: 'Index greetings',
+            platforms: ['web']
+        }
+    ]
+});
 ```
 
 #### Delete multiple keys
@@ -317,6 +359,10 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.keys.deleteMany('<project id>', {
+    keys: [12345, 12346]
+});
 ```
 
 #### Delete a key
@@ -324,6 +370,8 @@ const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
 ```js
 const LokaliseAPI = require('node-localise-api');
 const api = new LokaliseAPI({token: '<your-lokalise-api-token>'});
+
+const result = await api.keys.delete('<project id>', '<key id>');
 ```
 
 ### Languages

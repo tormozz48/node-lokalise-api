@@ -1,0 +1,20 @@
+{
+    "keys": [
+        {
+            "key_id": 331223,
+            "key_name": "index.welcome",
+            "description": "Index app welcome",
+            "platforms": [
+                "web"
+           ]
+        },
+        {
+            "key_id": 331224,
+            "key_name": "index.hello",
+            "description": "Index greetings",
+            "platforms": [
+                "web"
+           ]
+        }
+    ]
+}
