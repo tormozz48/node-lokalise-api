@@ -5,3 +5,4 @@ node_modules
 .npm
 .DS_Store
 docs
+.idea
