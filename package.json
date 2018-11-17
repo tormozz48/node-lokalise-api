@@ -31,7 +31,7 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
-    "build": "npm run clean-build && tsc",
+    "build": "npm run clean-build && tsc --experimentalDecorators",
     "docs": "node_modules/.bin/typedoc --target ES6 --out ./docs ./src --exclude ./test/**/*.ts --name node-lokalise-api --mode file",
     "docs-deploy": "gh-pages -d docs",
     "doctoc": "doctoc README.md",
@@ -74,7 +74,8 @@
     "typescript": "^3.1.6"
   },
   "dependencies": {
-    "got": "^9.3.2"
+    "got": "^9.3.2",
+    "joi": "^14.0.6"
   },
   "standard": {
     "env": [
