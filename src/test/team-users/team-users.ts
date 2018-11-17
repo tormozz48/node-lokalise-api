@@ -1,7 +1,7 @@
 import * as nock from 'nock';
 import {expect} from 'chai';
 import * as helper from '../helper';
-import LokaliseAPI from '../../index';
+import {LokaliseAPI} from '../../index';
 
 const SCOPE = 'team-users';
 

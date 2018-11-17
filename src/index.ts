@@ -29,7 +29,7 @@ import {Translations} from './implementation/translations';
 
 import {Request} from './internal/request';
 
-export default class LokaliseAPI {
+export class LokaliseAPI {
     private _comments: IComments;
     private _contributors: IContributors;
     private _files: IFiles;
