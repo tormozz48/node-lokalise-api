@@ -21,11 +21,11 @@ export interface ITasks {
      * @public
      * @description Retrieves a Task object.
      * @param {string} projectId
-     * @param {string} taskId
+     * @param {number} taskId
      * @returns {Promise<{project_id: string, task: ITask}>}
      * @memberof ITasks
      */
-    get(projectId: string, taskId: string):
+    get(projectId: string, taskId: number):
         Promise<{project_id: string, task: ITask}>;
 
     /**
@@ -45,12 +45,12 @@ export interface ITasks {
      * @description Updates the properties of a task.
      * Requires Manage tasks admin right.
      * @param {string} projectId
-     * @param {string} taskId
+     * @param {number} taskId
      * @param {object} body
      * @returns {Promise<{project_id: string, task: ITask}>}
      * @memberof ITasks
      */
-    update(projectId: string, taskId: string, body: object):
+    update(projectId: string, taskId: number, body: object):
         Promise<{project_id: string, task: ITask}>;
 
     /**
@@ -58,10 +58,10 @@ export interface ITasks {
      * @description Deletes a task from the project.
      * Requires Manage tasks admin right.
      * @param {string} projectId
-     * @param {string} taskId
+     * @param {number} taskId
      * @returns {Promise<{project_id: string, task_deleted: boolean}>}
      * @memberof ITasks
      */
-    delete(projectId: string, taskId: string):
+    delete(projectId: string, taskId: number):
         Promise<{project_id: string, task_deleted: boolean}>;
 }

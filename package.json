@@ -75,7 +75,8 @@
   },
   "dependencies": {
     "got": "^9.3.2",
-    "joi": "^14.0.6"
+    "joi": "^14.0.6",
+    "reflect-metadata": "^0.1.12"
   },
   "standard": {
     "env": [

@@ -25,11 +25,11 @@ export interface ILanguages {
      * @public
      * @description Retrieves a Language object.
      * @param {string} projectId
-     * @param {string} langId
+     * @param {number} langId
      * @returns {Promise<{project_id: string, language: ILanguage}>}
      * @memberof ILanguages
      */
-    get(projectId: string, langId: string):
+    get(projectId: string, langId: number):
         Promise<{project_id: string, language: ILanguage}>;
 
     /**
@@ -49,12 +49,12 @@ export interface ILanguages {
      * @description Updates the properties of a language.
      * Requires Manage languages admin right.
      * @param {string} projectId
-     * @param {string} langId
+     * @param {number} langId
      * @param {object} body
      * @returns {Promise<{project_id: string, language: ILanguage}>}
      * @memberof ILanguages
      */
-    update(projectId: string, langId: string, body: object):
+    update(projectId: string, langId: number, body: object):
         Promise<{project_id: string, language: ILanguage}>;
 
     /**
@@ -62,10 +62,10 @@ export interface ILanguages {
      * @description Deletes a language from the project.
      * Requires Manage languages admin right.
      * @param {string} projectId
-     * @param {string} langId
+     * @param {number} langId
      * @returns {Promise<{project_id: string, language_deleted: boolean}>}
      * @memberof ILanguages
      */
-    delete(projectId: string, langId: string):
+    delete(projectId: string, langId: number):
         Promise<{project_id: string, language_deleted: boolean}>;
 }

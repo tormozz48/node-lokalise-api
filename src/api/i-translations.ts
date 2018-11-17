@@ -19,11 +19,11 @@ export interface ITranslations {
      * @public
      * @description Retrieves a Translation object.
      * @param {string} projectId
-     * @param {string} translationId
+     * @param {number} translationId
      * @returns {Promise<{project_id: string, translation: ITranslation}>}
      * @memberof ITranslations
      */
-    get(projectId: string, translationId: string):
+    get(projectId: string, translationId: number):
         Promise<{project_id: string, translation: ITranslation}>;
 
     /**
@@ -31,11 +31,11 @@ export interface ITranslations {
      * @description Updates a translation.
      * Alternatively, use Bulk key update endpoint to update translations.
      * @param {string} projectId
-     * @param {string} translationId
+     * @param {number} translationId
      * @param {object} body
      * @returns {Promise<{project_id: string, translation: ITranslation}>}
      * @memberof ITranslations
      */
-    update(projectId: string, translationId: string, body: object):
+    update(projectId: string, translationId: number, body: object):
         Promise<{project_id: string, translation: ITranslation}>;
 }

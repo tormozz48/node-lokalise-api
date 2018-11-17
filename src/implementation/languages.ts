@@ -2,7 +2,7 @@ import {Base} from '../internal/base';
 import {ILanguages} from '../api/i-languages';
 import {IPage} from '../params/i-page';
 import {ILanguage} from '../model/i-language';
-import {validateProjectId} from '../validators/common';
+import {validate, checkString as s, checkNumber as n} from '../internal/validators';
 
 export class Languages extends Base implements ILanguages {
     list(projectId?: string, query?: IPage):
@@ -15,29 +15,29 @@ export class Languages extends Base implements ILanguages {
         return this.request.get({url, query});
     }
 
-    @validateProjectId
-    get(projectId: string, langId: string):
+    @validate
+    get(@s projectId: string, @n langId: number):
         Promise<{project_id: string, language: ILanguage}> {
 
         return this.request.get({url: `/projects/${projectId}/languages/${langId}`});
     }
 
-    @validateProjectId
-    create(projectId: string, body: object):
+    @validate
+    create(@s projectId: string, body: object):
         Promise<{project_id: string, languages: ILanguage[]}> {
 
         return this.request.post({body, url: `/projects/${projectId}/languages`});
     }
 
-    @validateProjectId
-    update(projectId: string, langId: string, body: object):
+    @validate
+    update(@s projectId: string, @n langId: number, body: object):
         Promise<{project_id: string, language: ILanguage}> {
 
         return this.request.put({body, url: `/projects/${projectId}/languages/${langId}`});
     }
 
-    @validateProjectId
-    delete(projectId: string, langId: string):
+    @validate
+    delete(@s projectId: string, @n langId: number):
         Promise<{project_id: string, language_deleted: boolean}> {
 
         return this.request.delete({url: `/projects/${projectId}/languages/${langId}`});

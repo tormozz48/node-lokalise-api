@@ -14,47 +14,47 @@ export interface IComments {
      * @public
      * @description Retrieves a list of all comments in the project or for given key (if specified).
      * @param {string} projectId
-     * @param {string} [keyId]
+     * @param {number} [keyId]
      * @param {IPage} [query]
      * @returns {Promise<{project_id: string, comments: IComment[]}>}
      * @memberof IComments
      */
-    list(projectId: string, keyId?: string, query?: IPage):
+    list(projectId: string, keyId?: number, query?: IPage):
         Promise<{project_id: string, comments: IComment[]}>;
 
     /**
      * @public
      * @description Retrieves a Comment object.
      * @param {string} projectId
-     * @param {string} keyId
-     * @param {string} commentId
+     * @param {number} keyId
+     * @param {number} commentId
      * @returns {Promise<{project_id: string, comment: IComment}>}
      * @memberof IComments
      */
-    get(projectId: string, keyId: string, commentId: string):
+    get(projectId: string, keyId: number, commentId: number):
         Promise<{project_id: string, comment: IComment}>;
 
     /**
      * @public
      * @description Adds a set of comments to the key
      * @param {string} projectId
-     * @param {string} keyId
+     * @param {number} keyId
      * @param {object} body
      * @returns {Promise<{project_id: string, comments: IComment[]}>}
      * @memberof IComments
      */
-    create(projectId: string, keyId: string, body: object):
+    create(projectId: string, keyId: number, body: object):
         Promise<{project_id: string, comments: IComment[]}>;
 
     /**
      * @public
      * @description Deletes a comment from the project. Authenticated user can only delete own comments
      * @param {string} projectId
-     * @param {string} keyId
-     * @param {string} commentId
+     * @param {number} keyId
+     * @param {number} commentId
      * @returns {Promise<{project_id: string, comment_deleted: true}>}
      * @memberof IComments
      */
-    delete(projectId: string, keyId: string, commentId: string):
+    delete(projectId: string, keyId: number, commentId: number):
         Promise<{project_id: string, comment_deleted: true}>;
 }

@@ -24,11 +24,11 @@ export interface IContributors {
      * @public
      * @description Retrieves a Contributor object.
      * @param {string} projectId
-     * @param {string} contributorId
+     * @param {number} contributorId
      * @returns {Promise<{project_id: string, contributor: IContributor}>}
      * @memberof IContributors
      */
-    get(projectId: string, contributorId: string):
+    get(projectId: string, contributorId: number):
         Promise<{project_id: string, contributor: IContributor}>;
 
     /**
@@ -52,22 +52,22 @@ export interface IContributors {
      * If you want to give an existing contributor access to a new language,
      * you must specify full languages array, including the previously added languages as well.
      * @param {string} projectId
-     * @param {string} contributorId
+     * @param {number} contributorId
      * @param {object} body
      * @returns {Promise<{project_id: string, contributor: IContributor}>}
      * @memberof IContributors
      */
-    update(projectId: string, contributorId: string, body: object):
+    update(projectId: string, contributorId: number, body: object):
         Promise<{project_id: string, contributor: IContributor}>;
 
     /**
      * @public
      * @description Deletes a user from the project. Requires Manage contributors admin right.
      * @param {string} projectId
-     * @param {string} contributorId
+     * @param {number} contributorId
      * @returns {Promise<{project_id: string, contributor_deleted: boolean}>}
      * @memberof IContributors
      */
-    delete(projectId: string, contributorId: string):
+    delete(projectId: string, contributorId: number):
         Promise<{project_id: string, contributor_deleted: boolean}>;
 }

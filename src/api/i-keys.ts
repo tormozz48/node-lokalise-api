@@ -28,11 +28,11 @@ export interface IKeys {
      * @public
      * @description Retrieves a Key object.
      * @param {string} projectId
-     * @param {string} keyId
+     * @param {number} keyId
      * @returns {Promise<{project_id: string, key: IKey}>}
      * @memberof IKeys
      */
-    get(projectId: string, keyId: string):
+    get(projectId: string, keyId: number):
         Promise<{project_id: string, key: IKey}>;
 
     /**
@@ -52,12 +52,12 @@ export interface IKeys {
      * @description Updates the properties of a key and it’s associated objects.
      * Requires Manage keys admin right.
      * @param {string} projectId
-     * @param {string} keyId
+     * @param {number} keyId
      * @param {object} body
      * @returns {Promise<{project_id: string, key: IKey}>}
      * @memberof IKeys
      */
-    update(projectId: string, keyId: string, body: object):
+    update(projectId: string, keyId: number, body: object):
         Promise<{project_id: string, key: IKey}>;
 
     /**
@@ -89,10 +89,10 @@ export interface IKeys {
      * @description Deletes a key from the project.
      * Requires Manage keys admin right.
      * @param {string} projectId
-     * @param {string} keyId
+     * @param {number} keyId
      * @returns {Promise<{project_id: string, key_removed: boolean}>}
      * @memberof IKeys
      */
-    delete(projectId: string, keyId: string):
+    delete(projectId: string, keyId: number):
         Promise<{project_id: string, key_removed: boolean}>;
 }

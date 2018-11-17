@@ -2,15 +2,15 @@ import {IProjects} from '../api/i-projects';
 import {IProjectQuery} from '../query/i-project';
 import {IProject} from '../model/i-project';
 import {Base} from '../internal/base';
-import {validateProjectId} from '../validators/common';
+import {validate, checkString as s} from '../internal/validators';
 
 export class Projects extends Base implements IProjects {
     list(query?: IProjectQuery): Promise<{projects: IProject[]}> {
         return this.request.get({url: `/projects`, query});
     }
 
-    @validateProjectId
-    get(projectId: string): Promise<IProject> {
+    @validate
+    get(@s projectId: string): Promise<IProject> {
         return this.request.get({url: `/projects/${projectId}`});
     }
 
@@ -18,18 +18,18 @@ export class Projects extends Base implements IProjects {
         return this.request.post({body, url: `/projects`});
     }
 
-    @validateProjectId
-    update(projectId: string, body: object): Promise<IProject> {
+    @validate
+    update(@s projectId: string, body: object): Promise<IProject> {
         return this.request.put({body, url: `/projects/${projectId}`});
     }
 
-    @validateProjectId
-    empty(projectId: string): Promise<{project_id: string, keys_deleted: boolean}> {
+    @validate
+    empty(@s projectId: string): Promise<{project_id: string, keys_deleted: boolean}> {
         return this.request.put({body: {}, url: `/projects/${projectId}/empty`});
     }
 
-    @validateProjectId
-    delete(projectId: string): Promise<{project_id: string, keys_deleted: boolean}> {
+    @validate
+    delete(@s projectId: string): Promise<{project_id: string, keys_deleted: boolean}> {
         return this.request.delete({url: `/projects/${projectId}`});
     }
 }
