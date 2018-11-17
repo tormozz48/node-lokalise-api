@@ -2,11 +2,11 @@ import {IKeys} from '../api/i-keys';
 import {IKeyQuery} from '../query/i-key';
 import {IKey} from '../model/i-key';
 import {Base} from '../internal/base';
-import {validate, checkString as s, checkNumber as n} from '../internal/validators';
+import {validate, checkString as s, checkNumber as n, checkPage} from '../internal/validators';
 
 export class Keys extends Base implements IKeys {
     @validate
-    list(@s projectId: string, query?: IKeyQuery):
+    list(@s projectId: string, @checkPage query?: IKeyQuery):
         Promise<{project_id: string, keys: IKey[]}> {
 
         return this.request.get({url: `/projects/${projectId}/keys`, query});

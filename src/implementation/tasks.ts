@@ -2,11 +2,11 @@ import {ITasks} from '../api/i-tasks';
 import {ITaskQuery} from '../query/i-task';
 import {ITask} from '../model/i-task';
 import {Base} from '../internal/base';
-import {validate, checkString as s, checkNumber as n} from '../internal/validators';
+import {validate, checkString as s, checkNumber as n, checkPage} from '../internal/validators';
 
 export class Tasks extends Base implements ITasks {
     @validate
-    list(@s projectId: string, query?: ITaskQuery):
+    list(@s projectId: string, @checkPage query?: ITaskQuery):
         Promise<{project_id: string, tasks: ITask[]}> {
 
         return this.request.get({url: `/projects/${projectId}/tasks`, query});

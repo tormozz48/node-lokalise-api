@@ -2,10 +2,10 @@ import {Base} from '../internal/base';
 import {ILanguages} from '../api/i-languages';
 import {IPage} from '../params/i-page';
 import {ILanguage} from '../model/i-language';
-import {validate, checkString as s, checkNumber as n} from '../internal/validators';
+import {validate, checkString as s, checkNumber as n, checkPage} from '../internal/validators';
 
 export class Languages extends Base implements ILanguages {
-    list(projectId?: string, query?: IPage):
+    list(projectId?: string, @checkPage query?: IPage):
         Promise<{project_id?: string, languages: ILanguage[]}> {
 
         const url = projectId

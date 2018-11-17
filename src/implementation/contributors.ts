@@ -1,13 +1,13 @@
 import {IPage} from '../params/i-page';
 import {IContributor} from '../model/i-contributor';
 import {IContributors} from '../api/i-contributors';
-import {validate, checkNumber as n, checkString as s} from '../internal/validators';
+import {validate, checkNumber as n, checkString as s, checkPage} from '../internal/validators';
 
 import {Base} from '../internal/base';
 
 export class Contributors extends Base implements IContributors {
     @validate
-    list(@s projectId: string, query?: IPage):
+    list(@s projectId: string, @checkPage query?: IPage):
         Promise<{project_id: string, contributors: IContributor[]}> {
 
         return this.request.get({url: `/projects/${projectId}/contributors`, query});

@@ -2,10 +2,10 @@ import {IProjects} from '../api/i-projects';
 import {IProjectQuery} from '../query/i-project';
 import {IProject} from '../model/i-project';
 import {Base} from '../internal/base';
-import {validate, checkString as s} from '../internal/validators';
+import {validate, checkString as s, checkPage} from '../internal/validators';
 
 export class Projects extends Base implements IProjects {
-    list(query?: IProjectQuery): Promise<{projects: IProject[]}> {
+    list(@checkPage query?: IProjectQuery): Promise<{projects: IProject[]}> {
         return this.request.get({url: `/projects`, query});
     }
 

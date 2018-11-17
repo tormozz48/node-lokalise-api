@@ -2,11 +2,11 @@ import {ISnapshots} from '../api/i-snapshots';
 import {IPage} from '../params/i-page';
 import {ISnapshot} from '../model/i-snapshot';
 import {Base} from '../internal/base';
-import {validate, checkString as s, checkNumber as n} from '../internal/validators';
+import {validate, checkString as s, checkNumber as n, checkPage} from '../internal/validators';
 
 export class Snapshots extends Base implements ISnapshots {
     @validate
-    list(projectId: string, query?: IPage):
+    list(projectId: string, @checkPage query?: IPage):
         Promise<{project_id: string, snapshots: ISnapshot[]}> {
 
         return this.request.get({url: `/projects/${projectId}/snapshots`, query});

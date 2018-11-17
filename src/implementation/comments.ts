@@ -2,11 +2,11 @@ import {IComments} from '../api/i-comments';
 import {IComment} from '../model/i-comment';
 import {IPage} from '../params/i-page';
 import {Base} from '../internal/base';
-import {validate, checkNumber as n, checkString as s} from '../internal/validators';
+import {validate, checkNumber as n, checkString as s, checkPage} from '../internal/validators';
 
 export class Comments extends Base implements IComments {
     @validate
-    public list(@s projectId: string, keyId?: number, query?: IPage):
+    public list(@s projectId: string, keyId?: number, @checkPage query?: IPage):
         Promise<{project_id: string, comments: IComment[]}> {
 
         const url = keyId

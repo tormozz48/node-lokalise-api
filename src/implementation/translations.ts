@@ -2,11 +2,11 @@ import {ITranslations} from '../api/i-translations';
 import {IPage} from '../params/i-page';
 import {ITranslation} from '../model/i-translation';
 import {Base } from '../internal/base';
-import {validate, checkString as s, checkNumber as n} from '../internal/validators';
+import {validate, checkString as s, checkNumber as n, checkPage} from '../internal/validators';
 
 export class Translations extends Base implements ITranslations {
     @validate
-    list(@s projectId: string, query?: IPage):
+    list(@s projectId: string, @checkPage query?: IPage):
         Promise<{project_id: string, translations: ITranslation[]}> {
 
         return this.request.get({url: `/projects/${projectId}/translations`, query});

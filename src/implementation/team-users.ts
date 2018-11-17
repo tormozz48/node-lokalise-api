@@ -2,11 +2,11 @@ import {ITeamUsers} from '../api/i-team-users';
 import {IPage} from '../params/i-page';
 import {ITeamUser} from '../model/i-team-user';
 import {Base} from '../internal/base';
-import {validate, checkNumber as n} from '../internal/validators';
+import {validate, checkNumber as n, checkPage} from '../internal/validators';
 
 export class TeamUsers extends Base implements ITeamUsers {
     @validate
-    list(@n teamId: number, query?: IPage):
+    list(@n teamId: number, @checkPage query?: IPage):
         Promise<{team_id: number, team_users: ITeamUser[]}> {
 
         return this.request.get({url: `/teams/${teamId}/users`, query});
@@ -27,7 +27,7 @@ export class TeamUsers extends Base implements ITeamUsers {
     }
 
     @validate
-    delete(@n teamId: number, userId: number):
+    delete(@n teamId: number, @n userId: number):
         Promise<{team_id: number, team_user_deleted: boolean}> {
 
         return this.request.delete({url: `/teams/${teamId}/users/${userId}`});

@@ -2,11 +2,11 @@ import {IScreenshots} from '../api/i-screenshots';
 import {IPage} from '../params/i-page';
 import {IScreenshot} from '../model/i-screenshot';
 import {Base} from '../internal/base';
-import {validate, checkString as s, checkNumber as n} from '../internal/validators';
+import {validate, checkString as s, checkNumber as n, checkPage} from '../internal/validators';
 
 export class Screenshots extends Base implements IScreenshots {
     @validate
-    list(@s projectId: string, query?: IPage):
+    list(@s projectId: string, @checkPage query?: IPage):
         Promise<{project_id: string, screenshots: IScreenshot[]}> {
 
         return this.request.get({url: `/projects/${projectId}/screenshots`, query});
