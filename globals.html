@@ -133,14 +133,23 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-variable"><a href="globals.html#base_url" class="tsd-kind-icon">BASE_<wbr>URL</a></li>
 								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#scope" class="tsd-kind-icon">SCOPE</a></li>
+								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#_debug" class="tsd-kind-icon">_debug</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#getrequest" class="tsd-kind-icon">get<wbr>Request</a></li>
 								<li class="tsd-kind-variable"><a href="globals.html#getresponse" class="tsd-kind-icon">get<wbr>Response</a></li>
+								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#numberkey" class="tsd-kind-icon">number<wbr>Key</a></li>
+								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#pagekey" class="tsd-kind-icon">page<wbr>Key</a></li>
+								<li class="tsd-kind-variable tsd-is-not-exported"><a href="globals.html#stringkey" class="tsd-kind-icon">string<wbr>Key</a></li>
 							</ul>
 						</section>
-						<section class="tsd-index-section tsd-is-not-exported">
+						<section class="tsd-index-section ">
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
+								<li class="tsd-kind-function"><a href="globals.html#checknumber" class="tsd-kind-icon">check<wbr>Number</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#checkpage" class="tsd-kind-icon">check<wbr>Page</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#checkstring" class="tsd-kind-icon">check<wbr>String</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#debug" class="tsd-kind-icon">debug</a></li>
 								<li class="tsd-kind-function tsd-is-not-exported"><a href="globals.html#getjsonfor" class="tsd-kind-icon">get<wbr>Json<wbr>For</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#validate" class="tsd-kind-icon">validate</a></li>
 							</ul>
 						</section>
 					</div>
@@ -154,7 +163,7 @@
 					<div class="tsd-signature tsd-kind-icon">BASE_<wbr>URL<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> =&nbsp;&quot;https://api.lokalise.co/api2&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/a4da058/src/test/helper.ts#L4">test/helper.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/test/helper.ts#L4">test/helper.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -164,18 +173,28 @@
 					<div class="tsd-signature tsd-kind-icon">SCOPE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"translations"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;translations&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/a4da058/src/test/comments/comments.ts#L6">test/comments/comments.ts:6</a></li>
-							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/a4da058/src/test/contributors/contributors.ts#L6">test/contributors/contributors.ts:6</a></li>
-							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/a4da058/src/test/files/files.ts#L6">test/files/files.ts:6</a></li>
-							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/a4da058/src/test/keys/keys.ts#L6">test/keys/keys.ts:6</a></li>
-							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/a4da058/src/test/languages/languages.ts#L6">test/languages/languages.ts:6</a></li>
-							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/a4da058/src/test/projects/projects.ts#L6">test/projects/projects.ts:6</a></li>
-							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/a4da058/src/test/screenshots/screenshots.ts#L6">test/screenshots/screenshots.ts:6</a></li>
-							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/a4da058/src/test/snapshots/snapshots.ts#L6">test/snapshots/snapshots.ts:6</a></li>
-							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/a4da058/src/test/tasks/tasks.ts#L6">test/tasks/tasks.ts:6</a></li>
-							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/a4da058/src/test/team-users/team-users.ts#L6">test/team-users/team-users.ts:6</a></li>
-							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/a4da058/src/test/teams/teams.ts#L6">test/teams/teams.ts:6</a></li>
-							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/a4da058/src/test/translations/translations.ts#L6">test/translations/translations.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/test/comments/comments.ts#L6">test/comments/comments.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/test/contributors/contributors.ts#L6">test/contributors/contributors.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/test/files/files.ts#L6">test/files/files.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/test/keys/keys.ts#L6">test/keys/keys.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/test/languages/languages.ts#L6">test/languages/languages.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/test/projects/projects.ts#L6">test/projects/projects.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/test/screenshots/screenshots.ts#L6">test/screenshots/screenshots.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/test/snapshots/snapshots.ts#L6">test/snapshots/snapshots.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/test/tasks/tasks.ts#L6">test/tasks/tasks.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/test/team-users/team-users.ts#L6">test/team-users/team-users.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/test/teams/teams.ts#L6">test/teams/teams.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/test/translations/translations.ts#L6">test/translations/translations.ts:6</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
+					<a name="_debug" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> _debug</h3>
+					<div class="tsd-signature tsd-kind-icon">_debug<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> =&nbsp;debugLib(&#x27;node-lokalise-api:&#x27;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/internal/debug.ts#L4">internal/debug.ts:4</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -185,7 +204,7 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Request<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> =&nbsp;getJsonFor(&#x27;requests&#x27;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/a4da058/src/test/helper.ts#L6">test/helper.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/test/helper.ts#L6">test/helper.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -195,13 +214,159 @@
 					<div class="tsd-signature tsd-kind-icon">get<wbr>Response<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">(Anonymous function)</span><span class="tsd-signature-symbol"> =&nbsp;getJsonFor(&#x27;responses&#x27;)</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/a4da058/src/test/helper.ts#L8">test/helper.ts:8</a></li>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/test/helper.ts#L8">test/helper.ts:8</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
+					<a name="numberkey" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> number<wbr>Key</h3>
+					<div class="tsd-signature tsd-kind-icon">number<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">unique symbol</span><span class="tsd-signature-symbol"> =&nbsp;Symbol(&#x27;numberType&#x27;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/internal/validators.ts#L5">internal/validators.ts:5</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
+					<a name="pagekey" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> page<wbr>Key</h3>
+					<div class="tsd-signature tsd-kind-icon">page<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">unique symbol</span><span class="tsd-signature-symbol"> =&nbsp;Symbol(&#x27;pageType&#x27;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/internal/validators.ts#L7">internal/validators.ts:7</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-variable tsd-is-not-exported">
+					<a name="stringkey" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagConst">Const</span> string<wbr>Key</h3>
+					<div class="tsd-signature tsd-kind-icon">string<wbr>Key<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">unique symbol</span><span class="tsd-signature-symbol"> =&nbsp;Symbol(&#x27;stringType&#x27;)</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/internal/validators.ts#L6">internal/validators.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
+			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Functions</h2>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="checknumber" class="tsd-anchor"></a>
+					<h3>check<wbr>Number</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">check<wbr>Number<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span>, propertyKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span>, parameterIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/internal/validators.ts#L9">internal/validators.ts:9</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <span class="tsd-signature-type">Object</span></h5>
+								</li>
+								<li>
+									<h5>propertyKey: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h5>
+								</li>
+								<li>
+									<h5>parameterIndex: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="checkpage" class="tsd-anchor"></a>
+					<h3>check<wbr>Page</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">check<wbr>Page<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span>, propertyKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span>, parameterIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/internal/validators.ts#L21">internal/validators.ts:21</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <span class="tsd-signature-type">Object</span></h5>
+								</li>
+								<li>
+									<h5>propertyKey: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h5>
+								</li>
+								<li>
+									<h5>parameterIndex: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="checkstring" class="tsd-anchor"></a>
+					<h3>check<wbr>String</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">check<wbr>String<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span>, propertyKey<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span>, parameterIndex<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/internal/validators.ts#L15">internal/validators.ts:15</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <span class="tsd-signature-type">Object</span></h5>
+								</li>
+								<li>
+									<h5>propertyKey: <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">symbol</span></h5>
+								</li>
+								<li>
+									<h5>parameterIndex: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="debug" class="tsd-anchor"></a>
+					<h3>debug</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">debug<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><a href="classes/request.html" class="tsd-signature-type">Request</a>, propertyName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, descriptor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TypedPropertyDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/internal/debug.ts#L6">internal/debug.ts:6</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <a href="classes/request.html" class="tsd-signature-type">Request</a></h5>
+								</li>
+								<li>
+									<h5>propertyName: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>descriptor: <span class="tsd-signature-type">TypedPropertyDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-not-exported">
 					<a name="getjsonfor" class="tsd-anchor"></a>
 					<h3>get<wbr>Json<wbr>For</h3>
@@ -212,7 +377,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/a4da058/src/test/helper.ts#L10">test/helper.ts:10</a></li>
+									<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/test/helper.ts#L10">test/helper.ts:10</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -222,6 +387,35 @@
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">(Anonymous function)</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="validate" class="tsd-anchor"></a>
+					<h3>validate</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">validate<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><a href="classes/base.html" class="tsd-signature-type">Base</a>, propertyName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, descriptor<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TypedPropertyDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/tormozz48/node-lokalise-api/blob/7aa79e5/src/internal/validators.ts#L27">internal/validators.ts:27</a></li>
+								</ul>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <a href="classes/base.html" class="tsd-signature-type">Base</a></h5>
+								</li>
+								<li>
+									<h5>propertyName: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>descriptor: <span class="tsd-signature-type">TypedPropertyDescriptor</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Function</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -396,14 +590,41 @@
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#scope" class="tsd-kind-icon">SCOPE</a>
 					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#_debug" class="tsd-kind-icon">_debug</a>
+					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#getrequest" class="tsd-kind-icon">get<wbr>Request</a>
 					</li>
 					<li class=" tsd-kind-variable">
 						<a href="globals.html#getresponse" class="tsd-kind-icon">get<wbr>Response</a>
 					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#numberkey" class="tsd-kind-icon">number<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#pagekey" class="tsd-kind-icon">page<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-variable tsd-is-not-exported">
+						<a href="globals.html#stringkey" class="tsd-kind-icon">string<wbr>Key</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#checknumber" class="tsd-kind-icon">check<wbr>Number</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#checkpage" class="tsd-kind-icon">check<wbr>Page</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#checkstring" class="tsd-kind-icon">check<wbr>String</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#debug" class="tsd-kind-icon">debug</a>
+					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#getjsonfor" class="tsd-kind-icon">get<wbr>Json<wbr>For</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#validate" class="tsd-kind-icon">validate</a>
 					</li>
 				</ul>
 			</nav>
