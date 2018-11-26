@@ -7,6 +7,8 @@ import { IPost } from '../params/i-post';
 import { IPut } from '../params/i-put';
 import { IRequest } from './i-request';
 
+import {debug} from './debug';
+
 interface IRequestOptions {
     baseUrl: string;
     body?: object;
@@ -26,6 +28,7 @@ export class Request implements IRequest {
         this.options = options;
     }
 
+    @debug
     public get(params: IGet): any {
         const options = this.getRequestOptions();
 
@@ -35,6 +38,7 @@ export class Request implements IRequest {
         return this.request(params.url, options);
     }
 
+    @debug
     public post(params: IPost): any {
         const options = this.getRequestOptions();
 
@@ -44,6 +48,7 @@ export class Request implements IRequest {
         return this.request(params.url, options);
     }
 
+    @debug
     public put(params: IPut): any {
         const options = this.getRequestOptions();
 
@@ -53,6 +58,7 @@ export class Request implements IRequest {
         return this.request(params.url, options);
     }
 
+    @debug
     public delete(params: IDelete): any {
         const options = this.getRequestOptions();
 
@@ -61,7 +67,6 @@ export class Request implements IRequest {
     }
 
     private request(url: string, options: IRequestOptions) {
-        console.log(url);
         return got[options.method](url, options as object)
             .then(({body}) => body)
             .catch((error) => {
