@@ -110,6 +110,25 @@ yarn add node-lokalise-api
 
 ## Usage
 
+Include in your module:
+```js
+const {LokaliseAPI} = require('node-lokalise-api');
+
+const api = new LokaliseAPI({
+    token: '<your-lokalise-api-token>'
+});
+
+// get comments for your project
+const result = await api.comments.list('<project id>', null, {page: 1, limit: 100});
+```
+
+Avaiable options are:
+
+* `token` - access token for Lokalize
+* `timeout` - maximum allowed time for request in millieconds. (10000 by default)
+* `retry` - number of allowed retry attempts for failed requests. (2 by default)
+* `baseUrl` - base url for Lokalize API endpoints. By default it is https://api.lokalise.co/api2.
+
 ## API
 
 ### Comments
